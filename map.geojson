@@ -1,0 +1,10 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [34.774223, 32.077972]
+  },
+  "properties": {
+    "name": "Tel Aviv"
+  }
+}
