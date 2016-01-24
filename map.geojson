@@ -1,15 +1,15 @@
 {
   "type": "Feature",
-  "title": "Virginia earthquake 2011 - mag. 5.8",
-  "description": "No deaths, minor injuries. Damage to buildings reported.",
-  "marker-symbol": "star",
-  "marker-size": "medium",
-  "marker-color": "#f44",
   "geometry": {
     "type": "Point",
     "coordinates": [34.774223, 32.077972]
   },
   "properties": {
+    "title": "This is the title",
+    "description": "And this is a long description.",
+    "marker-symbol": "Industrial",
+    "marker-size": "medium",
+    "marker-color": "#f44",
     "name": "Tel Aviv"
   }
 }
