@@ -1,0 +1,41 @@
+{ "type": "FeatureCollection", "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [34.774223, 32.077972]
+    },
+    "properties": {
+      "title": "This is the title 111",
+      "description": "<b>And this is a long description. 111<b> <script>alert(0)</script> test",
+      "marker-symbol": "industrial",
+      "marker-size": "large"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [ 34.807423, 32.158347 ]
+    },
+    "properties": {
+      "title": "This is the title 222",
+      "description": "And this is a long description. 222",
+      "marker-symbol": "rocket",
+      "marker-size": "large"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-0.127534, 51.507311]
+    },
+    "properties": {
+      "title": "This is the title 333",
+      "description": "And this is a long description. 333",
+      "marker-symbol": "clothing-store",
+      "marker-size": "large"
+    }
+  }
+]}
