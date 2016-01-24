@@ -10,7 +10,8 @@
       "properties": {
         "title": "This is the title 111",
         "description": "And this is a long description. 111",
-        "marker-symbol": "industrial"
+        "marker-symbol": "industrial",
+        "marker-size": "large"
       }
     },
     {
