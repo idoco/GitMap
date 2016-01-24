@@ -7,7 +7,7 @@
   "properties": {
     "title": "This is the title",
     "description": "And this is a long description.",
-    "marker-symbol": "Industrial",
+    "marker-symbol": "industrial",
     "marker-size": "medium",
     "marker-color": "#f44",
     "name": "Tel Aviv"
