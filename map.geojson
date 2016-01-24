@@ -23,7 +23,8 @@
       "properties": {
         "title": "This is the title 222",
         "description": "And this is a long description. 222",
-        "marker-symbol": "rocket"
+        "marker-symbol": "rocket",
+        "marker-size": "large"
       }
     },
     {
@@ -35,7 +36,8 @@
       "properties": {
         "title": "This is the title 333",
         "description": "And this is a long description. 333",
-        "marker-symbol": "clothing-store"
+        "marker-symbol": "clothing-store",
+        "marker-size": "large"
       }
     }
   ]
