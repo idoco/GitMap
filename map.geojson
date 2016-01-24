@@ -7,7 +7,7 @@
     },
     "properties": {
       "title": "This is the title 111",
-      "description": "And this is a long description. 111",
+      "description": "<b>And this is a long description. 111<b>",
       "marker-symbol": "industrial",
       "marker-size": "large"
     }
