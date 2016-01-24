@@ -1,13 +1,41 @@
 {
-  "type": "Feature",
-  "geometry": {
-    "type": "Point",
-    "coordinates": [34.774223, 32.077972]
-  },
-  "properties": {
-    "title": "This is the title",
-    "description": "And this is a long description.",
-    "marker-symbol": "industrial",
-    "name": "Tel Aviv"
-  }
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.774223, 32.077972]
+      },
+      "properties": {
+        "title": "This is the title 111",
+        "description": "And this is a long description. 111",
+        "marker-symbol": "industrial"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 34.807423, 32.158347 ]
+      },
+      "properties": {
+        "title": "This is the title 222",
+        "description": "And this is a long description. 222",
+        "marker-symbol": "rocket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.127534, 51.507311]
+      },
+      "properties": {
+        "title": "This is the title 333",
+        "description": "And this is a long description. 333",
+        "marker-symbol": "clothing-store"
+      }
+    }
+  ]
 }
