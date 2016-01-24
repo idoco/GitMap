@@ -14,20 +14,26 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 
-<div class="container">
-    <header>
-        <h1>GeoJsonHack</h1>
-        <p></p>
-        <p class="view"><a href="https://github.com/idoco/GeoJsonHack">View the Project on GitHub <small>idoco/GeoJsonHack</small></a></p>
-    </header>
+    <nav>
+        <div class="nav-wrapper blue-grey darken-4">
+            <a class="brand-logo center">GeoJsonHack</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="https://github.com/idoco/GeoJsonHack">GitHub</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="https://github.com/idoco/GeoJsonHack">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <script src="https://embed.github.com/view/geojson/idoco/GeoJsonHack/gh-pages/map.geojson"></script>
+    <iframe src="https://render.githubusercontent.com/view/geojson?url=https://raw.githubusercontent.com/idoco/GeoJsonHack/gh-pages/map.geojson"
+            style="position:fixed; top:64px; left:0; bottom:0; right:0; width:100%;
+            height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;">
+        Your browser doesn't support iframes
+    </iframe>
 
-    <footer>
-        <p>This project is maintained by <a href="https://github.com/idoco">idoco</a></p>
-        <p><small>Hosted on GitHub Pages</small></p>
-    </footer>
-</div>
+    <!--<p><small>Hosted on GitHub Pages</small></p>-->
 
 </body>
 </html>
