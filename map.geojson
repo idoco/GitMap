@@ -1,5 +1,10 @@
 {
   "type": "Feature",
+  "title": "Virginia earthquake 2011 - mag. 5.8",
+  "description": "No deaths, minor injuries. Damage to buildings reported.",
+  "marker-symbol": "star",
+  "marker-size": "medium",
+  "marker-color": "#f44",
   "geometry": {
     "type": "Point",
     "coordinates": [34.774223, 32.077972]
