@@ -12,7 +12,7 @@ const router = express.Router();
 
 // middleware to use for all requests
 router.use(function(req, res, next) {
-    console.log('Something is happening.');
+    console.log('Incoming '+req.method+' request: '+JSON.stringify(req.body));
     next();
 });
 
@@ -21,7 +21,11 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-    res.json({ message: 'Something will happen on post' });
+    var body = req.body;
+    res.json({
+        message: 'Something will happen on post',
+        echo: body
+    });
 });
 
 app.use('/api', router);
