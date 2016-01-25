@@ -1,30 +1,35 @@
 
 const express    = require('express');
 const bodyParser = require('body-parser');
+const Entry      = require('./Entry');
+const EntriesUtil      = require('./EntriesUtil');
 
-const app = express();
+const port = process.env.PORT || 8080,
+    interval = 10 * 1000,
+    file = "server/test.geojson";
+var unprocessedEntries = [];
+
+// create express app
+var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const port = process.env.PORT || 8080;
+var router = express.Router();
 
-const router = express.Router();
-
-// middleware to use for all requests
+// middleware  requests
 router.use(function(req, res, next) {
     console.log('Incoming '+req.method+' request: '+JSON.stringify(req.body));
     next();
 });
 
-router.get('/', function(req, res) {
-    res.json({ message: 'Hooray! welcome to our api!' });
-});
-
+// register post handler
 router.post('/', function(req, res) {
-    var body = req.body;
+    if (unprocessedEntries.length >= 100) {
+        unprocessedEntries.shift();
+    }
+    unprocessedEntries.push(new Entry(req.body));
     res.json({
-        message: 'Something will happen on post',
-        echo: body
+        message: 'Ok'
     });
 });
 
@@ -32,3 +37,14 @@ app.use('/api', router);
 app.listen(port);
 
 console.log('Magic happens on port ' + port);
+
+// process entities loop
+setInterval(function() {
+    if (unprocessedEntries.length > 0) {
+        try {
+            EntriesUtil.addNewEntriesToFile(file, unprocessedEntries)
+        } catch (e) {
+            unprocessedEntries = [];
+        }
+    }
+}, interval);
