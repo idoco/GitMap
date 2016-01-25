@@ -1,5 +1,4 @@
-var fs = require('fs');
-var file = "server/test.geojson";
+const fs = require('fs');
 
 const symbols = ["rocket", "industrial", "clothing-store"];
 
@@ -35,22 +34,34 @@ function createRandomEntry() {
     });
 }
 
-fs.readFile(file, 'utf8', function (err, data) {
-    if (err) return console.log(err);
-    var geoJson = JSON.parse(data);
-    var entries = geoJson.features;
-
-    for (var i=0; i<100; i++){
-        var newEntry = createRandomEntry();
-        if (entries.length >= 100) {
-            entries.shift();
-        }
-        entries.push(newEntry);
+function createRandomEntryList(size) {
+    var entryList = [];
+    for (var i = 0; i < size; i++) {
+        entryList.push(createRandomEntry());
     }
+    return entryList;
+}
 
-    var geoJsonAsString = JSON.stringify(geoJson, null, 4);
-
-    fs.writeFile(file, geoJsonAsString, 'utf8', function (err) {
+function addNewEntriesToFile(file, newEntries) {
+    fs.readFile(file, 'utf8', function (err, data) {
         if (err) return console.log(err);
+        var geoJson = JSON.parse(data);
+        var entries = geoJson.features;
+
+        newEntries.forEach(function(newEntry){
+            if (entries.length >= 100) {
+                entries.shift();
+            }
+            entries.push(newEntry);
+        });
+
+        var geoJsonAsString = JSON.stringify(geoJson, null, 4);
+        fs.writeFile(file, geoJsonAsString, 'utf8', function (err) {
+            if (err) return console.log(err);
+        });
     });
-});
+}
+
+var newEntries = createRandomEntryList(10);
+var file = "server/test.geojson";
+addNewEntriesToFile(file, newEntries);
