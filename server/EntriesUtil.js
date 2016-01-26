@@ -1,10 +1,13 @@
-const fs = require('fs');
+const fs            = require('fs');
+const GitExecUtil   = require('./GitExecUtil');
+
 
 function EntriesUtil() {}
 
-EntriesUtil.addNewEntriesToFile = function (file, newEntries) {
+EntriesUtil.addNewEntries = function (file, newEntries) {
     fs.readFile(file, 'utf8', function (err, data) {
         if (err) return console.log(err);
+
         var geoJson = JSON.parse(data);
         var existingEntries = geoJson.features;
 
@@ -19,6 +22,9 @@ EntriesUtil.addNewEntriesToFile = function (file, newEntries) {
         var geoJsonAsString = JSON.stringify(geoJson, null, 4);
         fs.writeFile(file, geoJsonAsString, 'utf8', function (err) {
             if (err) return console.log(err);
+
+            GitExecUtil.commitData("", file, "Api server adding new entries");
+
         });
     });
 };

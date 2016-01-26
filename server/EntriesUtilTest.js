@@ -28,4 +28,4 @@ function createRandomEntryList(size) {
 
 var newEntries = createRandomEntryList(10);
 var file = "server/test.geojson";
-EntriesUtil.addNewEntriesToFile(file, newEntries);
+EntriesUtil.addNewEntries(file, newEntries);

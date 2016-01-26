@@ -4,9 +4,6 @@ const bodyParser    = require('body-parser');
 
 const Entry         = require('./Entry');
 const EntriesUtil   = require('./EntriesUtil');
-const GitExecUtil   = require('./GitExecUtil');
-
-var pathToRepo = require("path").resolve("");
 
 const port = process.env.PORT || 8080,
     interval = 10 * 1000,
@@ -49,8 +46,7 @@ console.log('Magic happens on port ' + port);
 setInterval(function() {
     if (unprocessedEntries.length > 0) {
         try {
-            EntriesUtil.addNewEntriesToFile(file, unprocessedEntries);
-            GitExecUtil.commitData(pathToRepo, file, "Api server adding new entries");
+            EntriesUtil.addNewEntries(file, unprocessedEntries);
         } catch (e) {
             console.error("Failed to update entries: ", e);
         }
