@@ -80,6 +80,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "44.256",
+                    "33.605"
+                ]
+            },
+            "properties": {
+                "title": "API test 222",
+                "description": "And this is a long description kzfpj",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
         }
     ]
 }
