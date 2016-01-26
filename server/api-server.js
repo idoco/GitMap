@@ -24,6 +24,8 @@ var router = express.Router();
 // middleware  requests
 router.use(function(req, res, next) {
     console.log('Incoming '+req.method+' request: '+JSON.stringify(req.body));
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
 
