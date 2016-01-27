@@ -1,7 +1,7 @@
 const Entry = require('./Entry');
 const EntriesUtil = require('./EntriesUtil');
 
-const symbols = ["rocket", "industrial", "clothing-store"];
+const symbols = EntriesUtil.validSymobls;
 
 function createRandomEntry() {
     var randomFiveCharString = Math.random().toString(36).substr(2,5);
@@ -28,4 +28,10 @@ function createRandomEntryList(size) {
 
 var newEntries = createRandomEntryList(10);
 var file = "server/test.geojson";
+
+for (var i = 0; i < newEntries.length; i++) {
+    var obj = newEntries[i];
+    EntriesUtil.validateEntry(obj);
+}
+
 EntriesUtil.addNewEntries(file, newEntries);

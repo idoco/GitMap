@@ -28,18 +28,23 @@ router.use(function(req, res, next) {
 
 // register post handler
 router.post('/', function(req, res) {
+
+    var entry = new Entry(req.body);
+    try {
+        EntriesUtil.validateEntry(entry);
+    } catch (err) {
+        res.json({ error: err });
+    }
+
     if (unprocessedEntries.length >= 100) {
         unprocessedEntries.shift();
     }
-    unprocessedEntries.push(new Entry(req.body));
-    res.json({
-        message: 'Ok'
-    });
+    unprocessedEntries.push(entry);
+    res.json({ message: 'ok' });
 });
 
 app.use('/api', router);
 app.listen(port);
-
 console.log('Magic happens on port ' + port);
 
 // process entities loop
