@@ -80,6 +80,38 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "86.912",
+                    "3.719"
+                ]
+            },
+            "properties": {
+                "title": "This is the title 9f1jv",
+                "description": "And this is a long description 9f1jv",
+                "marker-symbol": "industrial",
+                "marker-size": "large"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-1.467",
+                    "-12.824"
+                ]
+            },
+            "properties": {
+                "title": "This is the title vvqj4",
+                "description": "And this is a long description vvqj4",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large"
+            }
         }
     ]
 }
