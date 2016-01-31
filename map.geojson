@@ -224,6 +224,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-79.346",
+                    "21.892"
+                ]
+            },
+            "properties": {
+                "title": "This is the title cfaun",
+                "description": "And this is a long description cfaun",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
         }
     ]
 }
