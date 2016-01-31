@@ -240,6 +240,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "82.011",
+                    "63.356"
+                ]
+            },
+            "properties": {
+                "title": "This is the title xg4gs",
+                "description": "And this is a long description xg4gs",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large"
+            }
         }
     ]
 }
