@@ -192,6 +192,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-33.798",
+                    "64.881"
+                ]
+            },
+            "properties": {
+                "title": "This is the title 1wsb2",
+                "description": "And this is a long description 1wsb2",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
         }
     ]
 }
