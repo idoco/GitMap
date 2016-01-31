@@ -128,6 +128,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "79.519",
+                    "39.529"
+                ]
+            },
+            "properties": {
+                "title": "This is the title yunl3",
+                "description": "And this is a long description yunl3",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large"
+            }
         }
     ]
 }
