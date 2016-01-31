@@ -3,6 +3,9 @@
  * buttons logic
  */
 
+var Github = require("github-api");
+var Entry = require("./Entry");
+
 var github, mainRepo, forkedRepo,
     retries = 10;
 
@@ -57,7 +60,7 @@ function readMapFile() {
 }
 
 function editMapFile(geojson) {
-    var entry = createRandomEntry();
+    var entry = Entry.createRandomEntry();
     geojson.features.push(entry);
 
     var options = {
@@ -92,5 +95,8 @@ function createPullRequest() {
         }
     );
 }
+
+window.refreshMap = refreshMap;
+window.postRandomEntry = postRandomEntry;
 
 

@@ -6,4 +6,5 @@
 out
 gen
 # Created by .ignore support plugin (hsz.mobi)
-experimental_server/node_modules
+web_client/node_modules
+web_client/build
