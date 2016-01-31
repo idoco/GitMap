@@ -11,7 +11,6 @@
 <body>
 
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-<script type="text/javascript" src="bundle.js"></script>
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
@@ -35,30 +34,13 @@
     </div>
 
     <main class="mdl-layout__content">
-        <div class="page-content">
-            <iframe id="mapFrame"
-                    src="https://render.githubusercontent.com/view/geojson?url=https://raw.githubusercontent.com/idoco/GeoJsonHack/gh-pages/map.geojson"
-                    style="width:100%; height:100%; position:fixed;">
-                Your browser doesn't support iframes
-            </iframe>
-        </div>
-
-
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
-                style="position: fixed; left: 70px; bottom: 70px;"
-                onclick="refreshMap()">
-            <i id="refresh-button" class="material-icons">refresh</i>
-        </button>
-
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
-                style="position: fixed; right: 70px; bottom: 70px;"
-                onclick="postRandomEntry()">
-            <i class="material-icons">add_location</i>
-        </button>
-
+        <div id="example"></div>
     </main>
+
+
 </div>
 
+<script type="text/javascript" src="bundle.js"></script>
 
 </body>
 </html>
