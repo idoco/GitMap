@@ -160,6 +160,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-3.654",
+                    "63.135"
+                ]
+            },
+            "properties": {
+                "title": "This is the title 7yeul",
+                "description": "And this is a long description 7yeul",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large"
+            }
         }
     ]
 }
