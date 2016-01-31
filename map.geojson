@@ -112,6 +112,22 @@
                 "marker-symbol": "clothing-store",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "31.797",
+                    "29.012"
+                ]
+            },
+            "properties": {
+                "title": "This is the title g6n08",
+                "description": "And this is a long description g6n08",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
         }
     ]
 }
