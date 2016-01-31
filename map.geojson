@@ -144,6 +144,22 @@
                 "marker-symbol": "clothing-store",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "85.540",
+                    "20.549"
+                ]
+            },
+            "properties": {
+                "title": "This is the title rqhhr",
+                "description": "And this is a long description rqhhr",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
         }
     ]
 }
