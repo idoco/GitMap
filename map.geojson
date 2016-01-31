@@ -208,6 +208,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "77.646",
+                    "3.474"
+                ]
+            },
+            "properties": {
+                "title": "This is the title uc9lr",
+                "description": "And this is a long description uc9lr",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
         }
     ]
 }
