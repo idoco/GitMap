@@ -11,7 +11,8 @@
 <body>
 
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-
+<script src="github/github.bundle.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
@@ -50,15 +51,15 @@
             <i id="refresh-button" class="material-icons">refresh</i>
         </button>
 
-        <!--<button class="mdl-button mdl-js-button mdl-button&#45;&#45;fab mdl-js-ripple-effect mdl-button&#45;&#45;colored"-->
-                <!--style="position: fixed; right: 70px; bottom: 70px;">-->
-            <!--<i class="material-icons">add_location</i>-->
-        <!--</button>-->
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
+                style="position: fixed; right: 70px; bottom: 70px;"
+                onclick="postRandomEntry()">
+            <i class="material-icons">add_location</i>
+        </button>
 
     </main>
 </div>
 
-<script type="text/javascript" src="main.js"></script>
 
 </body>
 </html>
