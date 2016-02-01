@@ -10,13 +10,17 @@ var controller = new Controller();
 var appElement = document.getElementById('example');
 
 const customStyles = {
+    overlay: {
+        zIndex: 100
+    },
     content : {
-        top                   : '50%',
-        left                  : '50%',
-        right                 : 'auto',
-        bottom                : 'auto',
-        marginRight           : '-50%',
-        transform             : 'translate(-50%, -50%)'
+        top         : '50%',
+        left        : '50%',
+        right       : 'auto',
+        bottom      : 'auto',
+        marginRight : '-50%',
+        transform   : 'translate(-50%, -50%)',
+        zIndex: 101
     }
 };
 
@@ -80,21 +84,37 @@ var App = React.createClass({
                     onRequestClose={this.closeModal}
                     style={customStyles} >
 
-                    <h2>Hello</h2>
-                    <button onClick={this.closeModal}>close</button>
+                    <h2>Submit new entry</h2>
                     <div>I am a modal</div>
                     <form>
-                        <input />
-                        <button>tab navigation</button>
-                        <button>stays</button>
-                        <button>inside</button>
-                        <button>the modal</button>
+
+                        <div class="form-group">
+                            <label for="input_text">First Name</label>
+                            <input type="text" id="input_text" placeholder="First Name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="input_email">Email address</label>
+                            <input type="email" id="input_email" placeholder="Email"/>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" value="option1" checked>
+                                    Option 1
+                                </input>
+                            </label>
+                            <label>
+                                <input type="radio" name="optionsRadios" value="option2">
+                                    Option 2
+                                </input>
+                            </label>
+                        </div>
                     </form>
+                    <button onClick={this.closeModal}>close</button>
                 </Modal>
 
             </div>
         );
-    }
-});
+        }
+        });
 
-ReactDOM.render(<App/>, appElement);
+        ReactDOM.render(<App/>, appElement);
