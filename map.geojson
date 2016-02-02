@@ -288,6 +288,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    null,
+                    "30"
+                ]
+            },
+            "properties": {
+                "title": "Test 123",
+                "description": "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test ",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
         }
     ]
 }
