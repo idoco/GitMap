@@ -4,12 +4,13 @@
  */
 
 var Github = require("github-api");
+
 var Entry = require("./Entry");
 
 function Controller() {
 
     var github, mainRepo, forkedRepo,
-        username, password,
+        username, entry, onPullRequestReady,
         retries = 10;
 
     function refreshMap() {
@@ -18,22 +19,27 @@ function Controller() {
         iFrame.src = iFrame.src;
     }
 
-    function postRandomEntry() {
-        if (!github) {
-            username = prompt("Please enter GitHub username");
-            password = prompt("Please enter GitHub password");
+    function postNewEntry(data) {
+        github = new Github({
+            username: data.username,
+            password: data.password,
+            auth: "basic"
+        });
 
-            github = new Github({
-                username: username,
-                password: password,
-                auth: "basic"
-            });
+        username = data.username;
+        entry = data.entry;
+        onPullRequestReady = data.callback;
+
+        try {
+            Entry.validateEntry(entry);
+        } catch (e) {
+            return reportError(e);
         }
 
         mainRepo = github.getRepo("idoco", "GeoJsonHack");
         mainRepo.fork(function (err) {
-            if (err) return console.error(err);
-            pollForFork();
+            if (err) return reportError(err);
+            pollForFork(data);
         });
     }
 
@@ -46,6 +52,8 @@ function Controller() {
                     console.error(err);
                     retries--;
                     setTimeout(pollForFork, 100);
+                } else if (err) {
+                    return reportError(err);
                 } else {
                     readMapFile();
                 }
@@ -54,16 +62,15 @@ function Controller() {
     }
 
     function readMapFile() {
-        forkedRepo.read('gh-pages', 'map.geojson',
+        mainRepo.read('gh-pages', 'map.geojson',
             function (err, geojson) {
-                if (err) return console.error(err);
+                if (err) return reportError(err);
                 editMapFile(geojson);
             }
         );
     }
 
     function editMapFile(geojson) {
-        var entry = Entry.createRandomEntry();
         geojson.features.push(entry);
 
         var options = {
@@ -73,7 +80,7 @@ function Controller() {
 
         forkedRepo.write('gh-pages', 'map.geojson', JSON.stringify(geojson, null, 4), 'Adding entry to map', options,
             function (err) {
-                if (err) return console.error(err);
+                if (err) return reportError(err);
                 createPullRequest();
             }
         );
@@ -89,19 +96,24 @@ function Controller() {
 
         mainRepo.createPullRequest(pull,
             function (err, pullRequest) {
-                if (err) {
-                    alert(err.request.responseText);
-                    console.error(err);
-                    return;
-                }
-                alert(pullRequest.html_url);
+                if (err) return reportError(err.request.responseText);
+                onPullRequestReady({pullRequestUrl: pullRequest.html_url});
             }
         );
     }
 
+    function reportError(err){
+        console.error(err);
+        if (err && err.request && err.request.responseText && err.request.responseText){
+            onPullRequestReady({err: ""+err.request.responseText});
+        } else {
+            onPullRequestReady({err: ""+err});
+        }
+    }
+
     return {
         refreshMap: refreshMap,
-        postRandomEntry: postRandomEntry
+        postNewEntry: postNewEntry
     }
 }
 

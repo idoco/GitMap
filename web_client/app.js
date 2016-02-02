@@ -88,7 +88,7 @@ var App = React.createClass({
                     onRequestClose={this.closeModal}
                     style={customStyles} >
 
-                    <NewEntryForm submit={controller.postRandomEntry} />
+                    <NewEntryForm postNewEntry={controller.postNewEntry} />
 
                 </Modal>
 

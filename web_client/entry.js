@@ -15,6 +15,39 @@ function Entry(options) {
     };
 }
 
+Entry.validateEntry = function (entry) {
+    var symbols = ["rocket", "industrial", "clothing-store"];
+
+    var lng = entry.geometry.coordinates[0];
+    var lat = entry.geometry.coordinates[1];
+    var title = entry.properties['title'];
+    var description = entry.properties['description'];
+    var symbol = entry.properties['marker-symbol'];
+
+    if (isNaN(lat) || isNaN(lng)) {
+        throw "coordinates must be numbers";
+    }
+
+    if (lat > 90 || lat < -90 || lng > 180 || lng < -180) {
+        throw "coordinates out of range";
+    }
+
+    if (symbols.indexOf(symbol) < 0) {
+        throw "Not a valid symbol";
+    }
+
+    if (typeof title != 'string' || typeof description != 'string') {
+        throw "Content must be text";
+    }
+
+    if (title.length > 100) {
+        throw "Title too long";
+    }
+
+    if (description.length > 2000) {
+        throw "Description too long";
+    }
+};
 
 Entry.createRandomEntry = function () {
     var symbols = ["rocket", "industrial", "clothing-store"];
