@@ -320,6 +320,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    null,
+                    "35"
+                ]
+            },
+            "properties": {
+                "title": "This is a test",
+                "description": "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test \n\ntest test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test ",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
         }
     ]
 }
