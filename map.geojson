@@ -80,6 +80,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "50",
+                    "50"
+                ]
+            },
+            "properties": {
+                "title": "Test title",
+                "description": "test testing test test test testing test test test testing test test test testing test test test testing test test testtest testing test test test testing test test testing test test test testing test test test testing test test testtest testing test test test testing test test test testing test test test testing test test test testing test test test",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
         }
     ]
 }
