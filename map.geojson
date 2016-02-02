@@ -96,6 +96,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-20",
+                    "-20"
+                ]
+            },
+            "properties": {
+                "title": "iPad test",
+                "description": "Testing from chrome on ipad",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
         }
     ]
 }
