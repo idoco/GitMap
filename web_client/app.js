@@ -2,6 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Modal = require('react-modal');
 
+var NewEntryForm = require('./NewEntryForm');
 
 var Controller = require('./Controller');
 var controller = new Controller();
@@ -36,6 +37,9 @@ const rightButtonStyle = {
     position: 'fixed', right: '70px', bottom: '70px'
 };
 
+const geoJsonContent = "?url=https://raw.githubusercontent.com/idoco/GeoJsonHack/gh-pages/map.geojson";
+const map = "https://render.githubusercontent.com/view/geojson"+ geoJsonContent;
+
 const buttonClassName = "mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored";
 const materialIcons = "material-icons";
 const pageContent = "page-content";
@@ -61,7 +65,7 @@ var App = React.createClass({
 
                 <div className={pageContent}>
                     <iframe id="mapFrame"
-                            src="https://render.githubusercontent.com/view/geojson?url=https://raw.githubusercontent.com/idoco/GeoJsonHack/gh-pages/map.geojson"
+                            src={map}
                             style={mapFrameStyle}>
                         Your browser doesn't support iframes
                     </iframe>
@@ -84,32 +88,8 @@ var App = React.createClass({
                     onRequestClose={this.closeModal}
                     style={customStyles} >
 
-                    <h2>Submit new entry</h2>
-                    <div>I am a modal</div>
-                    <form>
+                    <NewEntryForm submit={controller.postRandomEntry} />
 
-                        <div class="form-group">
-                            <label for="input_text">First Name</label>
-                            <input type="text" id="input_text" placeholder="First Name"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="input_email">Email address</label>
-                            <input type="email" id="input_email" placeholder="Email"/>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" value="option1" checked>
-                                    Option 1
-                                </input>
-                            </label>
-                            <label>
-                                <input type="radio" name="optionsRadios" value="option2">
-                                    Option 2
-                                </input>
-                            </label>
-                        </div>
-                    </form>
-                    <button onClick={this.closeModal}>close</button>
                 </Modal>
 
             </div>
