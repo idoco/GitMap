@@ -35,6 +35,20 @@ var NewEntryForm = React.createClass({
         this.props.postNewEntry(data);
     },
 
+    getLocation: function() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                document.getElementById("lat_input").value = position.coords.latitude
+                document.getElementById("lng_input").value = position.coords.longitude
+            });
+        } else {
+            this.setState({
+                requestState: 'error',
+                err: 'Geolocation is not supported by this browser.'
+            });
+        }
+    },
+
     onPullRequestReady: function(data) {
         if (data.err) {
             this.setState({
@@ -78,9 +92,10 @@ var NewEntryForm = React.createClass({
                         <br/>
                         <span>
                             <label>Latitude</label>
-                            <input type="text" ref="lat"/>
+                            <input type="text" ref="lat" id="lat_input"/>
                             <label>Longitude</label>
-                            <input type="text" ref="lng"/>
+                            <input type="text" ref="lng" id="lng_input"/>
+                            <button onClick={this.getLocation}>Use My</button>
                         </span>
                     </div>
 
