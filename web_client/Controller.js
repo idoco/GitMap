@@ -96,7 +96,7 @@ function Controller() {
 
         mainRepo.createPullRequest(pull,
             function (err, pullRequest) {
-                if (err) return reportError(err.request.responseText);
+                if (err) return reportError(err);
                 onPullRequestReady({pullRequestUrl: pullRequest.html_url});
             }
         );
@@ -104,8 +104,17 @@ function Controller() {
 
     function reportError(err){
         console.error(err);
-        if (err && err.request && err.request.responseText && err.request.responseText){
-            onPullRequestReady({err: ""+err.request.responseText});
+        if (err && err.request && err.request.responseText){
+            try {
+                var responseText = JSON.parse(err.request.responseText);
+                if (responseText.errors && responseText.errors[0] && responseText.errors[0].message) {
+                    onPullRequestReady({err: "" +  responseText.errors[0].message});
+                } else {
+                    onPullRequestReady({err: "" +  responseText.message});
+                }
+            } catch (e) {
+                onPullRequestReady({err: "" + err.request.responseText});
+            }
         } else {
             onPullRequestReady({err: ""+err});
         }
