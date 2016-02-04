@@ -134,13 +134,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "",
-                    ""
+                    "50",
+                    "50"
                 ]
             },
             "properties": {
-                "title": "",
-                "description": "",
+                "title": "test",
+                "description": "test test test test test test test test test test test ",
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
