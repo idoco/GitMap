@@ -21,6 +21,7 @@ const customStyles = {
         bottom      : 'auto',
         marginRight : '-50%',
         transform   : 'translate(-50%, -50%)',
+        'max-width'   : '550px',
         zIndex: 101
     }
 };
@@ -30,11 +31,11 @@ const mapFrameStyle = {
 };
 
 const leftButtonStyle = {
-    position: 'fixed', left: '70px', bottom: '70px'
+    position: 'fixed', left: '65px', bottom: '65px'
 };
 
 const rightButtonStyle = {
-    position: 'fixed', right: '70px', bottom: '70px'
+    position: 'fixed', right: '65px', bottom: '65px'
 };
 
 const geoJsonContent = "?url=https://raw.githubusercontent.com/idoco/GeoJsonHack/gh-pages/map.geojson";

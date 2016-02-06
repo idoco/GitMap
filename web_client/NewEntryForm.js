@@ -18,7 +18,7 @@ var NewEntryForm = React.createClass({
             "lng": this.refs.lng.value,
             "title": this.refs.title.value,
             "description": this.refs.description.value,
-            "symbol": "rocket"
+            "symbol": this.refs.radio_startup.checked ? this.refs.radio_startup.value : this.refs.radio_job.value
         });
 
         var data = {
@@ -38,8 +38,8 @@ var NewEntryForm = React.createClass({
     getLocation: function() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
-                document.getElementById("lat_input").value = position.coords.latitude
-                document.getElementById("lng_input").value = position.coords.longitude
+                document.getElementById("lat_input").value = position.coords.latitude;
+                document.getElementById("lng_input").value = position.coords.longitude;
             });
         } else {
             this.setState({
@@ -95,7 +95,7 @@ var NewEntryForm = React.createClass({
                             <input type="text" ref="lat" id="lat_input"/>
                             <label>Longitude</label>
                             <input type="text" ref="lng" id="lng_input"/>
-                            <button onClick={this.getLocation}>Use My</button>
+                            <button type="button" onClick={this.getLocation}>Use My</button>
                         </span>
                     </div>
 
@@ -103,17 +103,17 @@ var NewEntryForm = React.createClass({
                         <br/>
                         <label>Description</label>
                         <div></div>
-                        <textarea ref="description" rows="10" cols="70"/>
+                        <textarea ref="description" rows="10" cols="60"/>
                     </div>
 
                     <div>
                         <label>
                             <span>Startup</span>
-                            <input type="radio" name="myRadioInput" value="rocket"/>
+                            <input type="radio" name="myRadioInput" ref="radio_startup" value="rocket" defaultChecked={true}/>
                         </label>
                         <label>
                             <span>Job Seeker</span>
-                            <input type="radio" name="myRadioInput" value="clothing-store"/>
+                            <input type="radio" name="myRadioInput" ref="radio_job" value="clothing-store"/>
                         </label>
                     </div>
 
