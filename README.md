@@ -12,7 +12,7 @@ This demo explores the possibility of building a location based app by using onl
 - A request will be sent by you to fork this repository.
 - The [map.geojson](map.geojson) file in the forked repository will be edited to contain the new published data.
 - A pull request will be created in your behalf, to merge the new data to the main repository.
-- I will manully merge and approve pull request. (For now)
+- I manully merge and approve pull requests. (For now)
 
 #### My first project with react
 ![Me working with react](http://i1.kym-cdn.com/photos/images/original/000/234/765/b7e.jpg)
