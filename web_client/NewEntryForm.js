@@ -12,6 +12,14 @@ var NewEntryForm = React.createClass({
         }
     },
 
+    componentDidUpdate: function() {
+        componentHandler.upgradeDom();
+    },
+
+    componentDidMount: function() {
+        componentHandler.upgradeDom();
+    },
+
     submitForm: function() {
         var entry = new Entry({
             "lat": this.refs.lat.value,
@@ -38,8 +46,8 @@ var NewEntryForm = React.createClass({
     getLocation: function() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
-                document.getElementById("lat_input").value = position.coords.latitude;
-                document.getElementById("lng_input").value = position.coords.longitude;
+                document.getElementById("lat_input").value = position.coords.latitude.toFixed(3);
+                document.getElementById("lng_input").value = position.coords.longitude.toFixed(3);
             });
         } else {
             this.setState({
@@ -69,56 +77,68 @@ var NewEntryForm = React.createClass({
                 <h4>Post new entry</h4>
                 <form>
                     <h6>GitHub Credentials</h6>
-                    <div>
-                        <label>Username</label>
-                        <div></div>
-                        <input type="text" ref="username"/>
+
+                    <div className="mdl-textfield mdl-js-textfield" style={{width: '200px'}}>
+                        <input className="mdl-textfield__input" type="text" id="username" ref="username"/>
+                        <label className="mdl-textfield__label" htmlFor="username">Username</label>
                     </div>
-                    <div>
-                        <label>Password</label>
-                        <div></div>
-                        <input type="password" ref="password"/>
+
+                    <div className="mdl-textfield mdl-js-textfield" style={{width: '200px'}}>
+                        <input className="mdl-textfield__input" type="password" id="password" ref="password"/>
+                        <label className="mdl-textfield__label" htmlFor="password">Password</label>
                     </div>
 
                     <h6>Position Details</h6>
+                        <div className="mdl-textfield mdl-js-textfield">
+                            <input className="mdl-textfield__input" type="text" id="title" ref="title"/>
+                            <label className="mdl-textfield__label" htmlFor="title">Title</label>
+                        </div>
+
                     <div>
-                        <label>Title</label>
-                        <div></div>
-                        <input type="text" ref="title"/>
+                        <div style={{display: 'table-cell'}}>
+                            <div className="mdl-textfield mdl-js-textfield" style={{width: '100px'}}>
+                                <input className="mdl-textfield__input" type="text" id="lat_input" ref="lat"/>
+                                <label className="mdl-textfield__label" htmlFor="lat_input">Latitude</label>
+                            </div>
+                            <div className="mdl-textfield mdl-js-textfield" style={{width: '100px'}}>
+                                <input className="mdl-textfield__input" type="text" id="lng_input" ref="lng"/>
+                                <label className="mdl-textfield__label" htmlFor="lng_input">Longitude</label>
+                            </div>
+
+                            <button className="mdl-button mdl-js-button mdl-button--accent"
+                                    type="button" onClick={this.getLocation}>
+                                Use My Location
+                            </button>
+                        </div>
                     </div>
 
-
-                    <div>
-                        <br/>
-                        <span>
-                            <label>Latitude</label>
-                            <input type="text" ref="lat" id="lat_input"/>
-                            <label>Longitude</label>
-                            <input type="text" ref="lng" id="lng_input"/>
-                            <button type="button" onClick={this.getLocation}>Use My</button>
-                        </span>
+                    <div className="mdl-textfield mdl-js-textfield">
+                        <textarea className="mdl-textfield__input" type="text" rows= "5" id="description"
+                                  ref="description">
+                        </textarea>
+                        <label className="mdl-textfield__label" htmlFor="description">Text lines...</label>
                     </div>
 
                     <div>
-                        <br/>
-                        <label>Description</label>
-                        <div></div>
-                        <textarea ref="description" rows="10" cols="60"/>
-                    </div>
-
-                    <div>
-                        <label>
-                            <span>Startup</span>
-                            <input type="radio" name="myRadioInput" ref="radio_startup" value="rocket" defaultChecked={true}/>
+                        <label className="mdl-radio mdl-js-radio mdl-js-ripple-effect" htmlFor="radio_startup">
+                            <input type="radio" id="radio_startup"
+                                   className="mdl-radio__button" name="options"
+                                   ref="radio_startup" value="rocket"/>
+                            <span className="mdl-radio__label" >Startup</span>
                         </label>
-                        <label>
-                            <span>Job Seeker</span>
-                            <input type="radio" name="myRadioInput" ref="radio_job" value="clothing-store"/>
+                        <label className="mdl-radio mdl-js-radio mdl-js-ripple-effect" htmlFor="radio_job">
+                            <input type="radio" id="radio_job"
+                                   className="mdl-radio__button" name="options"
+                                   ref="radio_job" value="rocket" />
+                            <span className="mdl-radio__label" >Job Seeker</span>
                         </label>
                     </div>
 
                 </form>
-                <button onClick={this.submitForm}>Post</button>
+                <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                        onClick={this.submitForm}>
+                    Post
+                </button>
 
                 {(function(state) {
                     if (!state.requestState) {
