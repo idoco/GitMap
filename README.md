@@ -14,6 +14,9 @@ This demo explores the possibility of building a location based app by using onl
 - A pull request will be created in your behalf, to merge the new data to the main repository.
 - I manully merge and approve pull requests. (For now)
 
+#### GitHub authentication 
+Although your GitHub credentials are not stored or being sent to any unauthorized party, using your GitHub password in any site other than GitHub is problematic. I want to replace the authentication with [GitHub OAuth](https://developer.github.com/v3/oauth/), but I'm not sure how to do it without exposing the client_secret in the web client. 
+
 #### My first project with react
 ![Me working with react](http://i1.kym-cdn.com/photos/images/original/000/234/765/b7e.jpg)
 
