@@ -130,7 +130,7 @@ var NewEntryForm = React.createClass({
 
                     <div>
                         <label className="mdl-radio mdl-js-radio mdl-js-ripple-effect" htmlFor="radio_startup">
-                            <input type="radio" id="radio_startup"
+                            <input type="radio" id="radio_startup" defaultChecked={true}
                                    className="mdl-radio__button" name="options"
                                    ref="radio_startup" value="rocket"/>
                             <span className="mdl-radio__label" >Startup</span>
@@ -138,7 +138,7 @@ var NewEntryForm = React.createClass({
                         <label className="mdl-radio mdl-js-radio mdl-js-ripple-effect" htmlFor="radio_job">
                             <input type="radio" id="radio_job"
                                    className="mdl-radio__button" name="options"
-                                   ref="radio_job" value="rocket" />
+                                   ref="radio_job" value="clothing-store" />
                             <span className="mdl-radio__label" >Job Seeker</span>
                         </label>
                     </div>

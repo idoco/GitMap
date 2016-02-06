@@ -39,7 +39,7 @@ function Controller() {
         mainRepo = github.getRepo("idoco", "GitMap");
         mainRepo.fork(function (err) {
             if (err) return reportError(err);
-            pollForFork(data);
+            pollForFork();
         });
     }
 
