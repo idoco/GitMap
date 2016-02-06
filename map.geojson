@@ -144,6 +144,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-20",
+                    "-20"
+                ]
+            },
+            "properties": {
+                "title": "test test",
+                "description": "this is a test",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
         }
     ]
 }
