@@ -78,7 +78,6 @@ var NewEntryForm = React.createClass({
     render: function() {
         return (
             <div>
-                <h4>Post new entry</h4>
                 <form>
                     <h6>GitHub Credentials</h6>
 
@@ -103,14 +102,14 @@ var NewEntryForm = React.createClass({
                             <div className="mdl-textfield mdl-js-textfield" style={{width: '100px'}}
                                  id="lat_div">
                                 <input className="mdl-textfield__input" type="text" id="lat_input"
-                                       pattern="-?[0-9]*(\.[0-9]+)?" />
+                                       pattern="-?[0-9]*(\.[0-9]+)?" ref="lat"/>
                                 <label className="mdl-textfield__label" htmlFor="lat_input" >Latitude</label>
                                 <span className="mdl-textfield__error">Input is not a number!</span>
                             </div>
                             <div className="mdl-textfield mdl-js-textfield" style={{width: '100px'}}
                                  id="lng_div">
                                 <input className="mdl-textfield__input" type="text" id="lng_input"
-                                       pattern="-?[0-9]*(\.[0-9]+)?" />
+                                       pattern="-?[0-9]*(\.[0-9]+)?" ref="lng"/>
                                 <label className="mdl-textfield__label" htmlFor="lng_input">Longitude</label>
                                 <span className="mdl-textfield__error">Input is not a number!</span>
                             </div>
