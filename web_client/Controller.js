@@ -36,7 +36,7 @@ function Controller() {
             return reportError(e);
         }
 
-        mainRepo = github.getRepo("idoco", "GeoJsonHack");
+        mainRepo = github.getRepo("idoco", "GitMap");
         mainRepo.fork(function (err) {
             if (err) return reportError(err);
             pollForFork(data);
@@ -44,7 +44,7 @@ function Controller() {
     }
 
     function pollForFork() {
-        forkedRepo = github.getRepo(username, "GeoJsonHack");
+        forkedRepo = github.getRepo(username, "GitMap");
 
         forkedRepo.contents('gh-pages', "map.geojson",
             function (err) {

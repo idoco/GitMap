@@ -147,7 +147,7 @@ var NewEntryForm = React.createClass({
                 </form>
                 <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
                         onClick={this.submitForm}>
-                    Post
+                    Publish
                 </button>
 
                 {(function(state) {

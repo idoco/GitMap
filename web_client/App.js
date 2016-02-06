@@ -37,7 +37,7 @@ const rightButtonStyle = {
     position: 'fixed', right: '65px', bottom: '65px'
 };
 
-const geoJsonContent = "?url=https://raw.githubusercontent.com/idoco/GeoJsonHack/gh-pages/map.geojson";
+const geoJsonContent = "?url=https://raw.githubusercontent.com/idoco/GitMap/gh-pages/map.geojson";
 const map = "https://render.githubusercontent.com/view/geojson"+ geoJsonContent;
 
 const buttonClassName = "mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored";
