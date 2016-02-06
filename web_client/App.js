@@ -25,24 +25,8 @@ const customStyles = {
     }
 };
 
-const mapFrameStyle = {
-    width:'100%', height:'100%', position:'fixed'
-};
-
-const leftButtonStyle = {
-    position: 'fixed', left: '65px', bottom: '65px'
-};
-
-const rightButtonStyle = {
-    position: 'fixed', right: '65px', bottom: '65px'
-};
-
 const geoJsonContent = "?url=https://raw.githubusercontent.com/idoco/GitMap/gh-pages/map.geojson";
-const map = "https://render.githubusercontent.com/view/geojson"+ geoJsonContent;
-
-const buttonClassName = "mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored";
-const materialIcons = "material-icons";
-const pageContent = "page-content";
+const renderMapUrl = "https://render.githubusercontent.com/view/geojson"+ geoJsonContent;
 
 var App = React.createClass({
 
@@ -62,39 +46,35 @@ var App = React.createClass({
         return (
 
             <div>
-
-                <div className={pageContent}>
+                <div className="page-content">
                     <iframe id="mapFrame"
-                            src={map}
-                            style={mapFrameStyle}>
+                            src={renderMapUrl}
+                            style={{width:'100%', height:'100%', position:'fixed'}}>
                         Your browser doesn't support iframes
                     </iframe>
                 </div>
 
-                <button className={buttonClassName}
-                        style={leftButtonStyle}
+                <button className="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
+                        style={{position: 'fixed', left: '65px', bottom: '65px'}}
                         onClick={controller.refreshMap}>
-                    <i id="refresh-button" className={materialIcons}>refresh</i>
+                    <i id="refresh-button" className="material-icons">refresh</i>
                 </button>
 
-                <button className={buttonClassName}
-                        style={rightButtonStyle}
+                <button className="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
+                        style={{position: 'fixed', right: '65px', bottom: '65px'}}
                         onClick={this.openModal}>
-                    <i id="submit-button" className={materialIcons}>add_location</i>
+                    <i id="submit-button" className="material-icons">add_location</i>
                 </button>
 
                 <Modal
                     isOpen={this.state.modalIsOpen}
                     onRequestClose={this.closeModal}
                     style={customStyles} >
-
                     <NewEntryForm postNewEntry={controller.postNewEntry} />
-
                 </Modal>
-
             </div>
         );
-        }
-        });
+    }
+});
 
-        ReactDOM.render(<App/>, appElement);
+ReactDOM.render(<App/>, appElement);

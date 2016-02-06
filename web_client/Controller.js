@@ -43,6 +43,7 @@ function Controller() {
         });
     }
 
+    // loop 10 times to validate that the fork operation ended successfully
     function pollForFork() {
         forkedRepo = github.getRepo(username, "GitMap");
 

@@ -49,6 +49,7 @@ Entry.validateEntry = function (entry) {
     }
 };
 
+// used for testing
 Entry.createRandomEntry = function () {
     var symbols = ["rocket", "industrial", "clothing-store"];
     var randomFiveCharString = Math.random().toString(36).substr(2,5);
