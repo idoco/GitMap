@@ -150,14 +150,14 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "-50",
+                    "0",
                     "0"
                 ]
             },
             "properties": {
                 "title": "test",
                 "description": "test",
-                "marker-symbol": "rocket",
+                "marker-symbol": "clothing-store",
                 "marker-size": "large"
             }
         }
