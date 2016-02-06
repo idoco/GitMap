@@ -6,7 +6,7 @@ var NewEntryForm = React.createClass({
 
     getInitialState: function() {
         return {
-            requestState: null,
+            requestState: 'notSent',
             pullRequestUrl: '',
             err: ''
         }
@@ -122,20 +122,22 @@ var NewEntryForm = React.createClass({
                     </div>
 
                     <div className="mdl-textfield mdl-js-textfield" style={{width: '100%'}}>
-                        <textarea className="mdl-textfield__input" type="text" rows= "5" id="description"
+                        <textarea className="mdl-textfield__input" type="text" rows= "4" id="description"
                                   ref="description">
                         </textarea>
                         <label className="mdl-textfield__label" htmlFor="description">Job Desciption</label>
                     </div>
 
                     <div>
-                        <label className="mdl-radio mdl-js-radio mdl-js-ripple-effect" htmlFor="radio_startup">
+                        <label className="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+                               htmlFor="radio_startup" style={{margin: '10px'}}>
                             <input type="radio" id="radio_startup" defaultChecked={true}
                                    className="mdl-radio__button" name="options"
                                    ref="radio_startup" value="rocket"/>
                             <span className="mdl-radio__label" >Startup</span>
                         </label>
-                        <label className="mdl-radio mdl-js-radio mdl-js-ripple-effect" htmlFor="radio_job">
+                        <label className="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+                               htmlFor="radio_job">
                             <input type="radio" id="radio_job"
                                    className="mdl-radio__button" name="options"
                                    ref="radio_job" value="clothing-store" />
@@ -145,6 +147,7 @@ var NewEntryForm = React.createClass({
 
                 </form>
                 <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                        disabled={this.state.requestState == 'loading' || this.state.requestState == 'ready'}
                         onClick={this.submitForm}>
                     Publish
                 </button>
