@@ -150,13 +150,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "-20",
-                    "-20"
+                    "34.771",
+                    "32.084"
                 ]
             },
             "properties": {
-                "title": "test",
-                "description": "test",
+                "title": "Mobile test",
+                "description": "This is a test 333",
                 "marker-symbol": "clothing-store",
                 "marker-size": "large"
             }
