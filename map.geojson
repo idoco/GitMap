@@ -150,13 +150,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "-20",
-                    "-20"
+                    "-50",
+                    "-50"
                 ]
             },
             "properties": {
-                "title": "test test",
-                "description": "this is a test",
+                "title": "test",
+                "description": "test",
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
