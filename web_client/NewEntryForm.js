@@ -47,7 +47,11 @@ var NewEntryForm = React.createClass({
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
                 document.getElementById("lat_input").value = position.coords.latitude.toFixed(3);
+                document.getElementById("lat_div").className += " is-dirty";
+
                 document.getElementById("lng_input").value = position.coords.longitude.toFixed(3);
+                document.getElementById("lng_div").className += " is-dirty";
+                componentHandler.upgradeDom();
             });
         } else {
             this.setState({
@@ -96,13 +100,19 @@ var NewEntryForm = React.createClass({
 
                     <div>
                         <div style={{display: 'table-cell'}}>
-                            <div className="mdl-textfield mdl-js-textfield" style={{width: '100px'}}>
-                                <input className="mdl-textfield__input" type="text" id="lat_input" ref="lat"/>
-                                <label className="mdl-textfield__label" htmlFor="lat_input">Latitude</label>
+                            <div className="mdl-textfield mdl-js-textfield" style={{width: '100px'}}
+                                 id="lat_div">
+                                <input className="mdl-textfield__input" type="text" id="lat_input"
+                                       pattern="-?[0-9]*(\.[0-9]+)?" />
+                                <label className="mdl-textfield__label" htmlFor="lat_input" >Latitude</label>
+                                <span className="mdl-textfield__error">Input is not a number!</span>
                             </div>
-                            <div className="mdl-textfield mdl-js-textfield" style={{width: '100px'}}>
-                                <input className="mdl-textfield__input" type="text" id="lng_input" ref="lng"/>
+                            <div className="mdl-textfield mdl-js-textfield" style={{width: '100px'}}
+                                 id="lng_div">
+                                <input className="mdl-textfield__input" type="text" id="lng_input"
+                                       pattern="-?[0-9]*(\.[0-9]+)?" />
                                 <label className="mdl-textfield__label" htmlFor="lng_input">Longitude</label>
+                                <span className="mdl-textfield__error">Input is not a number!</span>
                             </div>
 
                             <button className="mdl-button mdl-js-button mdl-button--accent"
@@ -112,11 +122,11 @@ var NewEntryForm = React.createClass({
                         </div>
                     </div>
 
-                    <div className="mdl-textfield mdl-js-textfield">
+                    <div className="mdl-textfield mdl-js-textfield" style={{width: '100%'}}>
                         <textarea className="mdl-textfield__input" type="text" rows= "5" id="description"
                                   ref="description">
                         </textarea>
-                        <label className="mdl-textfield__label" htmlFor="description">Text lines...</label>
+                        <label className="mdl-textfield__label" htmlFor="description">Job Desciption</label>
                     </div>
 
                     <div>
