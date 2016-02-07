@@ -4,6 +4,7 @@
  */
 
 var Github = require("github-api");
+var request = require('superagent')
 
 var Entry = require("./Entry");
 
@@ -20,27 +21,34 @@ function Controller() {
     }
 
     function postNewEntry(data) {
-        github = new Github({
-            username: data.username,
-            password: data.password,
-            auth: "basic"
-        });
+        var queryString = window.location.href.slice(window.location.href.indexOf('?code') + 1).split('=');
+        var authCode = queryString[1];
 
-        username = data.username;
-        entry = data.entry;
-        onPullRequestReady = data.callback;
+        request
+            .get('https://hook.io/idoco/github-doorman?code=' + authCode)
+            .end(function(err, res){
+                var github = new Github({
+                    token: "OAUTH_TOKEN",
+                    auth: res.body.token
+                });
 
-        try {
-            Entry.validateEntry(entry);
-        } catch (e) {
-            return reportError(e);
-        }
+                username = data.username;
+                entry = data.entry;
+                onPullRequestReady = data.callback;
 
-        mainRepo = github.getRepo("idoco", "GitMap");
-        mainRepo.fork(function (err) {
-            if (err) return reportError(err);
-            pollForFork();
-        });
+                try {
+                    Entry.validateEntry(entry);
+                } catch (e) {
+                    return reportError(e);
+                }
+
+                mainRepo = github.getRepo("idoco", "GitMap");
+                mainRepo.fork(function (err) {
+                    if (err) return reportError(err);
+                    pollForFork();
+                });
+
+            });
     }
 
     // loop 10 times to validate that the fork operation ended successfully
