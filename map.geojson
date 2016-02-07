@@ -182,6 +182,22 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
+                    "33",
+                    "33"
+                ]
+            },
+            "properties": {
+                "title": "test 333",
+                "description": "33 3 3333 333 33 33333 3 3333 333 33 33333 3 3333 333 33 33333 3 3333 333 33 33333 3 3333 333 33 333",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
                     "22",
                     "22"
                 ]
