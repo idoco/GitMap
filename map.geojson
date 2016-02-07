@@ -177,6 +177,22 @@
                 "marker-size": "large"
             }
         },
+                {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-3.088",
+                    "53.541"
+                ]
+            },
+            "properties": {
+                "title": "Vvvvxxx",
+                "description": "wtfbbq",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
         {
             "type": "Feature",
             "geometry": {
