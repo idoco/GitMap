@@ -176,6 +176,22 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "22",
+                    "22"
+                ]
+            },
+            "properties": {
+                "title": "test 222",
+                "description": "222 222 22 222 22222 222 22 222 22222 222 22 222 22222 222 22 222 22222 222 22 222 22",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
         }
     ]
 }
