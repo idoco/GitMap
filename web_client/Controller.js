@@ -72,6 +72,7 @@ function Controller() {
     }
 
     function editMapFile(geojson) {
+        // pushing the new entry before the last entry in the list makes automatic merging simpler
         var last = geojson.features.pop();
         geojson.features.push(entry);
         geojson.features.push(last);
