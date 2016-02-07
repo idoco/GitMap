@@ -144,22 +144,6 @@
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "-0.088",
-                    "51.541"
-                ]
-            },
-            "properties": {
-                "title": "Vvvv",
-                "description": "wtfbbq",
-                "marker-symbol": "rocket",
-                "marker-size": "large"
-            }
         }
     ]
 }
