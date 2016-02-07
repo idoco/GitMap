@@ -72,7 +72,9 @@ function Controller() {
     }
 
     function editMapFile(geojson) {
+        var last = geojson.features.pop();
         geojson.features.push(entry);
+        geojson.features.push(last);
 
         var options = {
             committer: {name: username, email: username + '@unknown.com'},
