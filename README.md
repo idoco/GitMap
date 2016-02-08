@@ -17,7 +17,7 @@ This demo explores the possibility of building a location based app by using *on
 #### GitHub authentication 
 Initially I have implemented the new entry form with a place for you to put your GitHub credentials in it. Although the credentials were not stored or sent to any unauthorized party, using your GitHub password in any site other than GitHub was problematic and seemed suspicious. 
 
-I have replaced the authentication method to use [GitHub OAuth](https://developer.github.com/v3/oauth/). This method requires that a secret client key will be used to convert the GitHub user login code to the authorization token, so, I had set up a small [hook.io](https://hook.io/) hook to do these conversions. Since this architecture is very irregular, I think I might be ok with moving this logic to the web client in the future in some way. 
+I have replaced the authentication method to use [GitHub OAuth](https://developer.github.com/v3/oauth/). This method requires that a secret client key will be used to convert the GitHub user login code to the authorization token, so, I had set up a small [hook.io](https://hook.io/) hook to do these conversions. Since this architecture is very irregular, I think I might be ok with moving this logic to the web client in the future. 
 
 #### My first project with react
 ![Me working with react](http://i1.kym-cdn.com/photos/images/original/000/234/765/b7e.jpg)
