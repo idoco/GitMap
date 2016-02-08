@@ -11446,6 +11446,7 @@
 	    var github,
 	        mainRepo,
 	        forkedRepo,
+	        authToken,
 	        username,
 	        entry,
 	        onPullRequestReady,
@@ -11458,30 +11459,45 @@
 	    }
 
 	    function postNewEntry(data) {
+	        if (authToken) {
+	            startGitHubFlow(data);
+	        } else {
+	            acquireAuthToken(data);
+	        }
+	    }
+
+	    function acquireAuthToken(data) {
 	        var queryString = window.location.href.slice(window.location.href.indexOf('?code') + 1).split('=');
-	        var authCode = queryString[1];
+	        authToken = queryString[1];
 
-	        request.get('https://hook.io/idoco/github-doorman?code=' + authCode).end(function (err, res) {
-	            var github = new Github({
-	                token: "OAUTH_TOKEN",
-	                auth: res.body.token
+	        // the cake is a lie
+	        request.get('https://hook.io/idoco/github-doorman?code=' + authToken).end(function (err, res) {
+	            github = new Github({
+	                token: res.body.token,
+	                auth: "oauth"
 	            });
 
-	            username = data.username;
-	            entry = data.entry;
-	            onPullRequestReady = data.callback;
-
-	            try {
-	                Entry.validateEntry(entry);
-	            } catch (e) {
-	                return reportError(e);
-	            }
-
-	            mainRepo = github.getRepo("idoco", "GitMap");
-	            mainRepo.fork(function (err) {
-	                if (err) return reportError(err);
-	                pollForFork();
+	            github.getUser().show(null, function (err, user) {
+	                username = user.login;
+	                startGitHubFlow(data);
 	            });
+	        });
+	    }
+
+	    function startGitHubFlow(data) {
+	        entry = data.entry;
+	        onPullRequestReady = data.callback;
+
+	        try {
+	            Entry.validateEntry(entry);
+	        } catch (e) {
+	            return reportError(e);
+	        }
+
+	        mainRepo = github.getRepo("idoco", "GitMap");
+	        mainRepo.fork(function (err) {
+	            if (err) return reportError(err);
+	            pollForFork();
 	        });
 	    }
 
