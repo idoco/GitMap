@@ -12,12 +12,12 @@ This demo explores the possibility of building a location based app by using *on
 - A request will be sent by you to fork this repository.
 - The [map.geojson](map.geojson) file in the forked repository will be edited to contain the new published data.
 - A pull request will be created on your behalf, to merge the new data to the main repository.
-- I will manually merge and approve your pull requests and the new data will show up on the map in a few minutes. 
+- I will manually merge and approve your pull requests and the new data will show up on the map after a few moments. 
 
 #### GitHub authentication 
-Initially I have implement the new entry form with a place for you to put your GitHub credentials in it. Although the credentials were not stored or sent to any unauthorized party, using your GitHub password in any site other than GitHub was problematic and seemed suspicious. 
+Initially I have implemented the new entry form with a place for you to put your GitHub credentials in it. Although the credentials were not stored or sent to any unauthorized party, using your GitHub password in any site other than GitHub was problematic and seemed suspicious. 
 
-I have replaced the authentication method to use [GitHub OAuth](https://developer.github.com/v3/oauth/). Since this method requires that a secret client key will be used to convert the GitHub user login code to the authorization token, I had set up a small [hook.io](https://hook.io/) hook to do these conversions. Since this architecture is very irregular, I think I might be ok with moving this logic to the web client in future in some way. 
+I have replaced the authentication method to use [GitHub OAuth](https://developer.github.com/v3/oauth/). This method requires that a secret client key will be used to convert the GitHub user login code to the authorization token, so, I had set up a small [hook.io](https://hook.io/) hook to do these conversions. Since this architecture is very irregular, I think I might be ok with moving this logic to the web client in the future in some way. 
 
 #### My first project with react
 ![Me working with react](http://i1.kym-cdn.com/photos/images/original/000/234/765/b7e.jpg)
