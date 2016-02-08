@@ -30,8 +30,6 @@ var NewEntryForm = React.createClass({
         });
 
         var data = {
-            username    : this.refs.username.value,
-            password    : this.refs.password.value,
             entry       : entry,
             callback    : this.onPullRequestReady
         };
@@ -76,26 +74,26 @@ var NewEntryForm = React.createClass({
     },
 
     render: function() {
+
+        if (window.location.href.indexOf('?code') < 0){
+            return (
+                <div>
+                    <a href="https://github.com/login/oauth/authorize?client_id=7c710fb3bcb9805f7c3a&scope=public_repo">
+                        First, allow me to fork this repository for you.
+                    </a>
+                </div>
+            )
+        }
+
         return (
             <div>
                 <form>
-                    <h6>GitHub Credentials</h6>
-
-                    <div className="mdl-textfield mdl-js-textfield" style={{width: '200px'}}>
-                        <input className="mdl-textfield__input" type="text" id="username" ref="username"/>
-                        <label className="mdl-textfield__label" htmlFor="username">Username</label>
-                    </div>
-
-                    <div className="mdl-textfield mdl-js-textfield" style={{width: '200px'}}>
-                        <input className="mdl-textfield__input" type="password" id="password" ref="password"/>
-                        <label className="mdl-textfield__label" htmlFor="password">Password</label>
-                    </div>
 
                     <h6>Position Details</h6>
-                        <div className="mdl-textfield mdl-js-textfield">
-                            <input className="mdl-textfield__input" type="text" id="title" ref="title"/>
-                            <label className="mdl-textfield__label" htmlFor="title">Title</label>
-                        </div>
+                    <div className="mdl-textfield mdl-js-textfield">
+                        <input className="mdl-textfield__input" type="text" id="title" ref="title"/>
+                        <label className="mdl-textfield__label" htmlFor="title">Title</label>
+                    </div>
 
                     <div>
                         <div style={{display: 'table-cell'}}>

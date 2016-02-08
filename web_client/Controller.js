@@ -4,13 +4,14 @@
  */
 
 var Github = require("github-api");
+var request = require('superagent')
 
 var Entry = require("./Entry");
 
 function Controller() {
 
     var github, mainRepo, forkedRepo,
-        username, entry, onPullRequestReady,
+        authToken, username, entry, onPullRequestReady,
         retries = 10;
 
     function refreshMap() {
@@ -20,13 +21,37 @@ function Controller() {
     }
 
     function postNewEntry(data) {
-        github = new Github({
-            username: data.username,
-            password: data.password,
-            auth: "basic"
-        });
+        if (authToken) {
+            startGitHubFlow(data);
+        } else {
+            acquireAuthToken(data);
+        }
+    }
 
-        username = data.username;
+    function acquireAuthToken(data) {
+        var queryString = window.location.href.slice(window.location.href.indexOf('?code') + 1).split('=');
+        authToken = queryString[1];
+
+        // the cake is a lie
+        request.get('https://hook.io/idoco/github-doorman?code=' + authToken)
+            .end(function (err, res) {
+                if (err) return reportError(err);
+                if (res.body.token == '') return reportError("One-time token already used");
+
+                github = new Github({
+                    token: res.body.token,
+                    auth: "oauth"
+                });
+
+                github.getUser().show(null, function (err, user) {
+                    if (err) return reportError(err);
+                    username = user.login;
+                    startGitHubFlow(data);
+                });
+            });
+    }
+
+    function startGitHubFlow(data) {
         entry = data.entry;
         onPullRequestReady = data.callback;
 
