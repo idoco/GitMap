@@ -28,11 +28,18 @@ function Controller() {
         }
     }
 
+    function isAuthCodeReady() {
+        return authToken || window.location.href.indexOf('?code') >= 0
+    }
+
+
     function acquireAuthToken(data) {
         var queryString = window.location.href.slice(window.location.href.indexOf('?code') + 1).split('=');
         authToken = queryString[1];
+        window.history.replaceState({}, 'GitMap', 'https://idoco.github.io/GitMap');
 
         // the cake is a lie
+        // I can eliminate this call by exposing the client_secret in the web_client, I wonder if that would be ok
         request.get('https://hook.io/idoco/github-doorman?code=' + authToken)
             .end(function (err, res) {
                 if (err) return reportError(err);
@@ -151,7 +158,8 @@ function Controller() {
 
     return {
         refreshMap: refreshMap,
-        postNewEntry: postNewEntry
+        postNewEntry: postNewEntry,
+        isAuthCodeReady: isAuthCodeReady
     }
 }
 
