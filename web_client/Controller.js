@@ -30,6 +30,7 @@ function Controller() {
 
     function acquireAuthToken(data) {
         var queryString = window.location.href.slice(window.location.href.indexOf('?code') + 1).split('=');
+        window.history.replaceState( {} , 'GitMap', 'https://idoco.github.io/GitMap');
         authToken = queryString[1];
 
         // the cake is a lie
