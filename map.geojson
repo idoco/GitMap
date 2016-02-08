@@ -278,13 +278,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "",
-                    ""
+                    "0",
+                    "0"
                 ]
             },
             "properties": {
-                "title": "",
-                "description": "",
+                "title": "empty",
+                "description": "test",
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
