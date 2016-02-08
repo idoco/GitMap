@@ -75,7 +75,7 @@ var NewEntryForm = React.createClass({
 
     render: function() {
 
-        if (window.location.href.indexOf('?code') < 0){
+        if (!this.props.isAuthCodeReady()){
             return (
                 <div>
                     <a href="https://github.com/login/oauth/authorize?client_id=7c710fb3bcb9805f7c3a&scope=public_repo">

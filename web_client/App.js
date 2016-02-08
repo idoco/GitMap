@@ -70,7 +70,7 @@ var App = React.createClass({
                     isOpen={this.state.modalIsOpen}
                     onRequestClose={this.closeModal}
                     style={customStyles} >
-                    <NewEntryForm postNewEntry={controller.postNewEntry} />
+                    <NewEntryForm postNewEntry={controller.postNewEntry} isAuthCodeReady={controller.isAuthCodeReady} />
                 </Modal>
             </div>
         );
