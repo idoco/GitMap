@@ -246,6 +246,22 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
+                    "34.807",
+                    "32.159"
+                ]
+            },
+            "properties": {
+                "title": "wakka",
+                "description": "i seek job, me so happy",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
                     "22",
                     "22"
                 ]
