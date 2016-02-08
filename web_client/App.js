@@ -31,7 +31,7 @@ const renderMapUrl = "https://render.githubusercontent.com/view/geojson"+ geoJso
 var App = React.createClass({
 
     getInitialState: function() {
-        return { modalIsOpen: false };
+        return { modalIsOpen: controller.isUrlWithCode() };
     },
 
     openModal: function() {
@@ -70,7 +70,10 @@ var App = React.createClass({
                     isOpen={this.state.modalIsOpen}
                     onRequestClose={this.closeModal}
                     style={customStyles} >
-                    <NewEntryForm postNewEntry={controller.postNewEntry} isAuthCodeReady={controller.isAuthCodeReady} />
+                    <NewEntryForm postNewEntry={controller.postNewEntry}
+                                  isTokenReady={controller.isTokenReady}
+                                  isUrlWithCode={controller.isUrlWithCode}
+                    />
                 </Modal>
             </div>
         );

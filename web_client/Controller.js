@@ -4,7 +4,7 @@
  */
 
 var Github = require("github-api");
-var request = require('superagent')
+var request = require('superagent');
 
 var Entry = require("./Entry");
 
@@ -28,10 +28,13 @@ function Controller() {
         }
     }
 
-    function isAuthCodeReady() {
-        return authToken || window.location.href.indexOf('?code') >= 0
+    function isTokenReady() {
+        return authToken;
     }
 
+    function isUrlWithCode() {
+        return window.location.href.indexOf('?code') >= 0;
+    }
 
     function acquireAuthToken(data) {
         var queryString = window.location.href.slice(window.location.href.indexOf('?code') + 1).split('=');
@@ -160,7 +163,8 @@ function Controller() {
     return {
         refreshMap: refreshMap,
         postNewEntry: postNewEntry,
-        isAuthCodeReady: isAuthCodeReady
+        isTokenReady: isTokenReady,
+        isUrlWithCode: isUrlWithCode
     }
 }
 
