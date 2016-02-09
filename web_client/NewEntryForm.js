@@ -154,7 +154,12 @@ var NewEntryForm = React.createClass({
                     if (!state.requestState) {
                         return (<div></div>);
                     } else if (state.requestState == 'loading') {
-                        return (<div>Loading...</div>);
+                        return (
+                            <div>
+                                <br/>
+                                <div className={"mdl-progress mdl-js-progress mdl-progress__indeterminate"}
+                                     style={{width: '100%'}}></div>
+                            </div>);
                     } else if (state.requestState == 'ready') {
                         return (<div><a href={state.pullRequestUrl}>Track your submission</a></div>);
                     } else if (state.requestState == 'error') {

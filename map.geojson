@@ -262,6 +262,38 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
+                    "-34.808",
+                    "-32.159"
+                ]
+            },
+            "properties": {
+                "title": "Firefox test ",
+                "description": "Firefox test Firefox test Firefox test Firefox test Firefox test Firefox test Firefox test Firefox test Firefox test \n\nFirefox test Firefox test Firefox test Firefox test Firefox test Firefox",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "0",
+                    "0"
+                ]
+            },
+            "properties": {
+                "title": "empty",
+                "description": "test",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
                     "22",
                     "22"
                 ]
