@@ -38,9 +38,8 @@ function Controller() {
 
     function acquireAuthToken(data) {
         var queryString = window.location.href.slice(window.location.href.indexOf('?code') + 1).split('=');
-        window.history.replaceState( {} , 'GitMap', 'https://idoco.github.io/GitMap');
         authToken = queryString[1];
-        window.history.replaceState({}, 'GitMap', 'https://idoco.github.io/GitMap');
+        window.history.replaceState({}, 'GitMap', window.location.href.slice(0, window.location.href.indexOf('?')));
 
         // the cake is a lie
         // I can eliminate this call by exposing the client_secret in the web_client, I wonder if that would be ok
