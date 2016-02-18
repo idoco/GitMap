@@ -19,6 +19,8 @@
     "superagent": "1.7.2"
   },
   "devDependencies": {
+    "jsxhint": "^0.15.1",
+    "jsxhint-loader": "^0.2.0",
     "webpack": "^2.0.6-beta"
   }
 }

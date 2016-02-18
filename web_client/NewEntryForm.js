@@ -9,7 +9,7 @@ var NewEntryForm = React.createClass({
             requestState: 'notSent',
             pullRequestUrl: '',
             err: ''
-        }
+        };
     },
 
     componentDidUpdate: function() {
@@ -82,7 +82,7 @@ var NewEntryForm = React.createClass({
                         First, allow me to fork this repository for you.
                     </a>
                 </div>
-            )
+            );
         }
 
         return (

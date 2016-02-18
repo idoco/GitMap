@@ -20,8 +20,8 @@ Entry.validateEntry = function (entry) {
 
     var lng = entry.geometry.coordinates[0];
     var lat = entry.geometry.coordinates[1];
-    var title = entry.properties['title'];
-    var description = entry.properties['description'];
+    var title = entry.properties.title;
+    var description = entry.properties.description;
     var symbol = entry.properties['marker-symbol'];
 
     if (isNaN(lat) || isNaN(lng)) {

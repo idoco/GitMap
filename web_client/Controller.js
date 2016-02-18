@@ -46,7 +46,7 @@ function Controller() {
         request.get('https://hook.io/idoco/github-doorman?code=' + authToken)
             .end(function (err, res) {
                 if (err) return reportError(err);
-                if (res.body.token == '') return reportError("One-time token already used");
+                if (res.body.token === '') return reportError("One-time token already used");
 
                 github = new Github({
                     token: res.body.token,
@@ -164,7 +164,7 @@ function Controller() {
         postNewEntry: postNewEntry,
         isTokenReady: isTokenReady,
         isUrlWithCode: isUrlWithCode
-    }
+    };
 }
 
 module.exports = Controller;

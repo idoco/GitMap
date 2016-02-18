@@ -6,9 +6,16 @@ module.exports = {
         filename: "../bundle.js"
     },
     module: {
+        preLoaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'jsxhint-loader'
+            }
+        ],
         loaders: [
             {
-                exclude: /(node_moudles|app-server.js)/,
+                exclude: /node_moudles/,
                 loader: 'babel',
                 query: {
                     presets:['react']
@@ -27,5 +34,10 @@ module.exports = {
                 warnings: false
             }
         })
-    ]
+    ],
+
+    devtool: 'source-map',
+    jshint: {
+        esversion: 6
+    }
 };
