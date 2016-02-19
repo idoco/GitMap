@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: "./app.js",
+    entry: "./App.js",
     output: {
         filename: "../bundle.js"
     },
@@ -18,6 +18,10 @@ module.exports = {
                 exclude: /node_moudles/,
                 loader: 'babel',
                 query: {
+
+                    // https://github.com/rauschma/tree-shaking-demo
+                    // All of the plugins of babel-preset-es2015,
+                    // minus babel-plugin-transform-es2015-modules-commonjs
                     plugins: [
                         'transform-es2015-template-literals',
                         'transform-es2015-literals',

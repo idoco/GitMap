@@ -41,11 +41,19 @@ Entry.validateEntry = function (entry) {
     }
 
     if (title.length > 100) {
-        throw "Title too long";
+        throw "Title is too long";
     }
 
     if (description.length > 2000) {
-        throw "Description too long";
+        throw "Description is too long";
+    }
+
+    if (title.length < 5) {
+        throw "Title is too short";
+    }
+
+    if (description.length < 20) {
+        throw "Description is too short";
     }
 };
 
