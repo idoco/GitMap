@@ -1,4 +1,6 @@
 function Entry(options) {
+    var randomFiveCharString = Math.random().toString(36).substr(2,5);
+    this["start-"+randomFiveCharString] = randomFiveCharString;
     this.type = "Feature";
     this.geometry = {
         "type": "Point",
@@ -13,6 +15,7 @@ function Entry(options) {
         "marker-symbol": options.symbol,
         "marker-size": "large"
     };
+    this["end-"+randomFiveCharString] = randomFiveCharString;
 }
 
 Entry.validateEntry = function (entry) {
