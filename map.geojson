@@ -82,6 +82,24 @@
             }
         },
         {
+            "start-4iwod": "4iwod",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-10",
+                    "-10"
+                ]
+            },
+            "properties": {
+                "title": "test test 2",
+                "description": "ad kdaskdjk kdaskd ldkashd",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            },
+            "end-4iwod": "4iwod"
+        },
+        {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
