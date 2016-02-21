@@ -125,6 +125,25 @@
         },
 
         {
+            "start-pt002": "pt002",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-10",
+                    "-10"
+                ]
+            },
+            "properties": {
+                "title": "test test test",
+                "description": "das das dsad ada sda da ",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            },
+            "end-pt002": "pt002"
+        },
+
+        {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
