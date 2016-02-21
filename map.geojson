@@ -246,6 +246,22 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "60",
+                    "60"
+                ]
+            },
+            "properties": {
+                "title": "shacharke test",
+                "description": "dsdalkd kdskds dhsjdhsjdh",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {},
