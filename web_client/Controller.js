@@ -107,10 +107,11 @@ function Controller() {
     }
 
     function editMapFile(geojson) {
-        // pushing the new entry before the last entry in the list makes automatic merging simpler
-        var last = geojson.features.pop();
-        geojson.features.push(entry);
-        geojson.features.push(last);
+
+        // pushing the new entry in a random index in the list should make automatic merging simpler
+        var features = geojson.features;
+        var randomIndexInFeaturesArray = Math.floor(Math.random() * (features.length-1));
+        features.splice(randomIndexInFeaturesArray, 0, entry);
 
         var options = {
             committer: {name: username, email: username + '@unknown.com'},
@@ -118,9 +119,6 @@ function Controller() {
         };
 
         var jsonString = JSON.stringify(geojson, null, 4);
-        //padding with spaces to ease merges
-        jsonString = jsonString.replace(new RegExp('{\n            \"start', 'g'), '{   \"start');
-        jsonString = jsonString.replace(new RegExp('},\n        {', 'g'), '},\n\n        {');
         forkedRepo.write('gh-pages', 'map.geojson', jsonString, 'Adding entry to map', options,
             function (err) {
                 if (err) return reportError(err);
