@@ -140,6 +140,24 @@
             "end-oukpk": "oukpk"
         },
 
+        {   "start-ce4t3": "ce4t3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "30",
+                    "-30"
+                ]
+            },
+            "properties": {
+                "title": "test shacharke 3",
+                "description": "sad kda dsad asd ads khnfjhasd",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            },
+            "end-ce4t3": "ce4t3"
+        },
+
         {
             "type": "Feature",
             "geometry": {
