@@ -51,6 +51,22 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "90",
+                    "-90"
+                ]
+            },
+            "properties": {
+                "title": "testing new",
+                "description": "Description is too short",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {
