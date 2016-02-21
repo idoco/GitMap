@@ -17,6 +17,7 @@
                 "marker-size": "large"
             }
         },
+
         {
             "type": "Feature",
             "geometry": {
@@ -33,6 +34,7 @@
                 "marker-size": "large"
             }
         },
+
         {
             "type": "Feature",
             "geometry": {
@@ -49,6 +51,7 @@
                 "marker-size": "large"
             }
         },
+
         {
             "type": "Feature",
             "geometry": {
@@ -65,6 +68,7 @@
                 "marker-size": "large"
             }
         },
+
         {
             "type": "Feature",
             "geometry": {
@@ -81,8 +85,8 @@
                 "marker-size": "large"
             }
         },
-        {
-            "start-4iwod": "4iwod",
+
+        {   "start-4iwod": "4iwod",
             "type": "Feature",
             "geometry": {
                 "type": "Point",
@@ -99,6 +103,61 @@
             },
             "end-4iwod": "4iwod"
         },
+
+        {   "start-32et1": "32et1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-20",
+                    "-20"
+                ]
+            },
+            "properties": {
+                "title": "test test test",
+                "description": "dsa das da da dadww adad asd a",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            },
+            "end-32et1": "32et1"
+        },
+
+        {   "start-oukpk": "oukpk",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-5",
+                    "-5"
+                ]
+            },
+            "properties": {
+                "title": "test test test ",
+                "description": "sad adas d ada sd adad ad ",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            },
+            "end-oukpk": "oukpk"
+        },
+
+        {   "start-ce4t3": "ce4t3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "30",
+                    "-30"
+                ]
+            },
+            "properties": {
+                "title": "test shacharke 3",
+                "description": "sad kda dsad asd ads khnfjhasd",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            },
+            "end-ce4t3": "ce4t3"
+        },
+
         {
             "type": "Feature",
             "geometry": {
