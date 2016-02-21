@@ -117,7 +117,11 @@ function Controller() {
             encode: true // Whether to base64 encode the file. (default: true)
         };
 
-        forkedRepo.write('gh-pages', 'map.geojson', JSON.stringify(geojson, null, 4), 'Adding entry to map', options,
+        var jsonString = JSON.stringify(geojson, null, 4);
+        //padding with spaces to ease merges
+        jsonString = jsonString.replace(new RegExp('{\n            \"start', 'g'), '{   \"start');
+        jsonString = jsonString.replace(new RegExp('},\n        {', 'g'), '},\n\n        {');
+        forkedRepo.write('gh-pages', 'map.geojson', jsonString, 'Adding entry to map', options,
             function (err) {
                 if (err) return reportError(err);
                 createPullRequest();
