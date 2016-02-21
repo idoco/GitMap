@@ -86,8 +86,7 @@
             }
         },
 
-        {
-            "start-4iwod": "4iwod",
+        {   "start-4iwod": "4iwod",
             "type": "Feature",
             "geometry": {
                 "type": "Point",
@@ -105,8 +104,7 @@
             "end-4iwod": "4iwod"
         },
 
-        {
-            "start-32et1": "32et1",
+        {   "start-32et1": "32et1",
             "type": "Feature",
             "geometry": {
                 "type": "Point",
@@ -122,6 +120,24 @@
                 "marker-size": "large"
             },
             "end-32et1": "32et1"
+        },
+
+        {   "start-oukpk": "oukpk",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-5",
+                    "-5"
+                ]
+            },
+            "properties": {
+                "title": "test test test ",
+                "description": "sad adas d ada sd adad ad ",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            },
+            "end-oukpk": "oukpk"
         },
 
         {
