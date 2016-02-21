@@ -24,22 +24,6 @@
         {},
         {},
         {},
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "5",
-                    "5"
-                ]
-            },
-            "properties": {
-                "title": "rpm-user test over",
-                "description": "dsd sjkdlk dklkd dsld ds",
-                "marker-symbol": "rocket",
-                "marker-size": "large"
-            }
-        },
         {},
         {},
         {},
@@ -51,56 +35,6 @@
         {},
         {},
         {},
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "90",
-                    "-90"
-                ]
-            },
-            "properties": {
-                "title": "testing new",
-                "description": "Description is too short",
-                "marker-symbol": "clothing-store",
-                "marker-size": "large"
-            }
-        },
-        {},
-        {},
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "12",
-                    "12"
-                ]
-            },
-            "properties": {
-                "title": "test rpm-user new",
-                "description": "asd ada sdasdad dsdsd dsdsds",
-                "marker-symbol": "rocket",
-                "marker-size": "large"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "-100",
-                    "70"
-                ]
-            },
-            "properties": {
-                "title": "test rpm 2",
-                "description": "Position Details\nPosition Details\nPosition Details\n",
-                "marker-symbol": "rocket",
-                "marker-size": "large"
-            }
-        },
         {},
         {},
         {},
@@ -112,22 +46,20 @@
         {},
         {},
         {},
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "-60",
-                    "-60"
-                ]
-            },
-            "properties": {
-                "title": "rpm-user test",
-                "description": "fsdfsd fsdf sfs dfsdf dfd ",
-                "marker-symbol": "rocket",
-                "marker-size": "large"
-            }
-        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
         {},
         {},
         {},
@@ -195,110 +127,6 @@
                 "marker-size": "large"
             }
         },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "34.782",
-                    "32.085"
-                ]
-            },
-            "properties": {
-                "title": "2 Simultaneous post by shacharke",
-                "description": "Simultaneous post by shacharke description",
-                "marker-symbol": "clothing-store",
-                "marker-size": "large"
-            }
-        },
-        {
-            "start-4iwod": "4iwod",
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "-10",
-                    "-10"
-                ]
-            },
-            "properties": {
-                "title": "test test 2",
-                "description": "ad kdaskdjk kdaskd ldkashd",
-                "marker-symbol": "rocket",
-                "marker-size": "large"
-            },
-            "end-4iwod": "4iwod"
-        },
-        {
-            "start-32et1": "32et1",
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "-20",
-                    "-20"
-                ]
-            },
-            "properties": {
-                "title": "test test test",
-                "description": "dsa das da da dadww adad asd a",
-                "marker-symbol": "rocket",
-                "marker-size": "large"
-            },
-            "end-32et1": "32et1"
-        },
-        {
-            "start-oukpk": "oukpk",
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "-5",
-                    "-5"
-                ]
-            },
-            "properties": {
-                "title": "test test test ",
-                "description": "sad adas d ada sd adad ad ",
-                "marker-symbol": "rocket",
-                "marker-size": "large"
-            },
-            "end-oukpk": "oukpk"
-        },
-        {
-            "start-ce4t3": "ce4t3",
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "30",
-                    "-30"
-                ]
-            },
-            "properties": {
-                "title": "test shacharke 3",
-                "description": "sad kda dsad asd ads khnfjhasd",
-                "marker-symbol": "rocket",
-                "marker-size": "large"
-            },
-            "end-ce4t3": "ce4t3"
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    27.578,
-                    6.714
-                ]
-            },
-            "properties": {
-                "title": "This is the title ek1fm",
-                "description": "And this is a long description ek1fm",
-                "marker-symbol": "rocket",
-                "marker-size": "large"
-            }
-        },
         {},
         {},
         {},
@@ -310,22 +138,18 @@
         {},
         {},
         {},
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "60",
-                    "60"
-                ]
-            },
-            "properties": {
-                "title": "shacharke test",
-                "description": "dsdalkd kdskds dhsjdhsjdh",
-                "marker-symbol": "rocket",
-                "marker-size": "large"
-            }
-        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
         {},
         {},
         {},
