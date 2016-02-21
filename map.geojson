@@ -17,6 +17,7 @@
                 "marker-size": "large"
             }
         },
+
         {
             "type": "Feature",
             "geometry": {
@@ -33,6 +34,7 @@
                 "marker-size": "large"
             }
         },
+
         {
             "type": "Feature",
             "geometry": {
@@ -49,6 +51,7 @@
                 "marker-size": "large"
             }
         },
+
         {
             "type": "Feature",
             "geometry": {
@@ -65,6 +68,7 @@
                 "marker-size": "large"
             }
         },
+
         {
             "type": "Feature",
             "geometry": {
@@ -81,8 +85,8 @@
                 "marker-size": "large"
             }
         },
-        {
-            "start-4iwod": "4iwod",
+
+        {   "start-4iwod": "4iwod",
             "type": "Feature",
             "geometry": {
                 "type": "Point",
@@ -99,8 +103,8 @@
             },
             "end-4iwod": "4iwod"
         },
-        {
-            "start-32et1": "32et1",
+
+        {   "start-32et1": "32et1",
             "type": "Feature",
             "geometry": {
                 "type": "Point",
@@ -117,8 +121,8 @@
             },
             "end-32et1": "32et1"
         },
-        {
-            "start-oukpk": "oukpk",
+
+        {   "start-oukpk": "oukpk",
             "type": "Feature",
             "geometry": {
                 "type": "Point",
@@ -135,24 +139,25 @@
             },
             "end-oukpk": "oukpk"
         },
-        {
-            "start-ihttx": "ihttx",
+
+        {   "start-ce4t3": "ce4t3",
             "type": "Feature",
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "-10",
-                    "10"
+                    "30",
+                    "-30"
                 ]
             },
             "properties": {
-                "title": "test shacharke 2",
-                "description": "da asd ad afd afd dfd f wwa",
+                "title": "test shacharke 3",
+                "description": "sad kda dsad asd ads khnfjhasd",
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             },
-            "end-ihttx": "ihttx"
+            "end-ce4t3": "ce4t3"
         },
+
         {
             "type": "Feature",
             "geometry": {
