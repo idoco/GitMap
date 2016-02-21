@@ -85,6 +85,22 @@
                 "marker-size": "large"
             }
         },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-100",
+                    "70"
+                ]
+            },
+            "properties": {
+                "title": "test rpm 2",
+                "description": "Position Details\nPosition Details\nPosition Details\n",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {},
