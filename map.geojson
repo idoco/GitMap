@@ -24,6 +24,22 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "5",
+                    "5"
+                ]
+            },
+            "properties": {
+                "title": "rpm-user test over",
+                "description": "dsd sjkdlk dklkd dsld ds",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {},
@@ -35,6 +51,22 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "90",
+                    "-90"
+                ]
+            },
+            "properties": {
+                "title": "testing new",
+                "description": "Description is too short",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {
@@ -64,6 +96,22 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-60",
+                    "-60"
+                ]
+            },
+            "properties": {
+                "title": "rpm-user test",
+                "description": "fsdfsd fsdf sfs dfsdf dfd ",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {},
