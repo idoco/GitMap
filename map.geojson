@@ -155,6 +155,22 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-0.126",
+                    "51.509"
+                ]
+            },
+            "properties": {
+                "title": "A test job in London",
+                "description": "A test job in London\nA test job in London",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {},
