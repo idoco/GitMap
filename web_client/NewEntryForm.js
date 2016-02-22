@@ -1,4 +1,5 @@
 var React = require('react');
+var Geocoder = require('react-select-geocoder');
 
 var Entry = require("./Entry");
 
@@ -41,22 +42,33 @@ var NewEntryForm = React.createClass({
         this.props.postNewEntry(data);
     },
 
-    getLocation: function() {
+    getUserLocation: function() {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                document.getElementById("lat_input").value = position.coords.latitude.toFixed(3);
-                document.getElementById("lat_div").className += " is-dirty";
-
-                document.getElementById("lng_input").value = position.coords.longitude.toFixed(3);
-                document.getElementById("lng_div").className += " is-dirty";
-                componentHandler.upgradeDom();
-            });
+            navigator.geolocation.getCurrentPosition(this.setLocation);
         } else {
             this.setState({
                 requestState: 'error',
                 err: 'Geolocation is not supported by this browser.'
             });
         }
+    },
+
+    getSelectedLocation: function(location){
+        this.setLocation({
+            coords :{
+                longitude: location.geometry.coordinates[0],
+                latitude: location.geometry.coordinates[1]
+            }
+        });
+    },
+
+    setLocation: function(position) {
+        document.getElementById("lat_input").value = position.coords.latitude.toFixed(3);
+        document.getElementById("lat_div").className += " is-dirty";
+
+        document.getElementById("lng_input").value = position.coords.longitude.toFixed(3);
+        document.getElementById("lng_div").className += " is-dirty";
+        componentHandler.upgradeDom();
     },
 
     onPullRequestReady: function(data) {
@@ -96,6 +108,9 @@ var NewEntryForm = React.createClass({
                     </div>
 
                     <div>
+
+                        <Geocoder apiKey={'search-WPgeBUE'} onChange={this.getSelectedLocation}/>
+
                         <div style={{display: 'table-cell'}}>
                             <div className="mdl-textfield mdl-js-textfield" style={{width: '100px'}}
                                  id="lat_div">
@@ -113,7 +128,7 @@ var NewEntryForm = React.createClass({
                             </div>
 
                             <button className="mdl-button mdl-js-button mdl-button--accent"
-                                    type="button" onClick={this.getLocation}>
+                                    type="button" onClick={this.getUserLocation}>
                                 Use My Location
                             </button>
                         </div>
