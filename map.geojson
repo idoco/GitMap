@@ -38,6 +38,22 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "13.411",
+                    "52.521"
+                ]
+            },
+            "properties": {
+                "title": "JHipster Developer",
+                "description": "JHipster is a Yeoman generator, used to create a Spring Boot + AngularJS project.\n\n<a href=http://jhipster.github.io/>Greetings, Java Hipster!</a>",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {},
