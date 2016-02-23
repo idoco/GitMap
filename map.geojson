@@ -9,6 +9,22 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-74.006",
+                    "40.714"
+                ]
+            },
+            "properties": {
+                "title": "NYC test job",
+                "description": "SpaceX Falcon 9 rocket landing fails after booster leg breaks",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {},
