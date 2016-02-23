@@ -56,8 +56,8 @@ var NewEntryForm = React.createClass({
     getSelectedLocation: function(position){
         this.setLocation({
             coords :{
-                longitude: position.geometry.coordinates[0],
-                latitude: position.geometry.coordinates[1]
+                longitude: Number(position.geometry.coordinates[0]),
+                latitude: Number(position.geometry.coordinates[1])
             }
         });
     },
