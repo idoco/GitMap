@@ -156,6 +156,22 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "34.810",
+                    "32.084"
+                ]
+            },
+            "properties": {
+                "title": "XKCD Stack developer",
+                "description": "Requirements:\n<li>QBasic on Rails</li>\n<li>Hypercard.js</li>\n<li>Microsoft Bob Server®</li>\n<a href=https://xkcd.com/1636/>XKCD Stack</a>",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {},
