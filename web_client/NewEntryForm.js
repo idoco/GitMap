@@ -109,7 +109,8 @@ var NewEntryForm = React.createClass({
 
                     <div>
 
-                        <Geocoder apiKey={'search-WPgeBUE'} onChange={this.getSelectedLocation}/>
+                        <Geocoder apiKey={'search-WPgeBUE'} placeholder={'Select Location'}
+                                  onChange={this.getSelectedLocation} />
 
                         <div style={{display: 'table-cell'}}>
                             <div className="mdl-textfield mdl-js-textfield" style={{width: '100px'}}
