@@ -92,6 +92,22 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-122.423",
+                    "37.772"
+                ]
+            },
+            "properties": {
+                "title": "PM-in-Residence",
+                "description": "<h3> <a href=https://angel.co/gitmap/jobs>GitMap</a></h5>\n<br> <a href=https://angel.co/gitmap/jobs/115720-pm-in-residence>PM-in-Residence</a>\n<br> $75k - $150k - No equity\n<p> Product-in-Residence at GitMap \nBe a part of one of the most exciting teams, in one of the most exciting tech spaces, in one of the world’s most exciting cities for startups.\n</p>",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {},
