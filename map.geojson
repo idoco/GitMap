@@ -14,13 +14,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "-74.006",
-                    "40.714"
+                    -74.0065,
+                    40.714
                 ]
             },
             "properties": {
-                "title": "NYC test job",
-                "description": "SpaceX Falcon 9 rocket landing fails after booster leg breaks",
+                "title": "<h3>NYC test job</h3>",
+                "description": "SpaceX <b>Falcon</b> 9 rocket landing fails after booster leg breaks <script>alert(1)</script>",
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
@@ -176,8 +176,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "-0.126",
-                    "51.509"
+                    -0.126,
+                    51.509
                 ]
             },
             "properties": {
