@@ -75,6 +75,17 @@ var App = React.createClass({
                                   isUrlWithCode={controller.isUrlWithCode}
                     />
                 </Modal>
+
+                <Modal
+                    isOpen={this.state.modalIsOpen}
+                    onRequestClose={this.closeModal}
+                    style={customStyles} >
+                    <NewEntryForm postNewEntry={controller.postNewEntry}
+                                  isTokenReady={controller.isTokenReady}
+                                  isUrlWithCode={controller.isUrlWithCode}
+                    />
+                </Modal>
+
             </div>
         );
     }
