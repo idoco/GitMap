@@ -19,8 +19,8 @@
                 ]
             },
             "properties": {
-                "title": "<h3>NYC test job</h3>",
-                "description": "<b>SpaceX Falcon 9</b> rocket landing fails after booster leg breaks <br> <a href=https://www.youtube.com/watch?v=jshk8ZVIgdI>Link</a>",
+                "title": "<h3> <a href=https://www.youtube.com/watch?v=jshk8ZVIgdI>SpaceX Falcon 9 - Landing Leg Inspector</a> </h3>",
+                "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today SpaceX is actively developing the technologies to make this possible, with the ultimate goal of enabling human life on Mars.<br> <a href=https://www.youtube.com/watch?v=jshk8ZVIgdI>Link</a>",
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
