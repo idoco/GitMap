@@ -153,8 +153,8 @@
                 ]
             },
             "properties": {
-                "title": "A test job in London",
-                "description": "A test job in London\nA test job in London",
+                "title": "<h3> <a href=https://angel.co/gitmap/jobs/123-senior-full-stack-python-developer>Senior Full-Stack Python Developer At MapChat</a> </h3>",
+                "description": "<br>£50k - £75k - 0.0-0.5% <br> We’re looking for a highly skilled Python / Django developer who can help make our entrepreneurs idea become a reality. You will build MVPs, offer expert technical advice and make suggestions for innovations through working in an agile fashion as a founding member of the companies we invest in.",
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
