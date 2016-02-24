@@ -72,8 +72,8 @@
     ga('send', 'pageview');
 </script>
 
-<dialog class="mdl-dialog" style="width: 400px">
-    <h4 class="mdl-dialog__title">How GitMap Works?</h4>
+<dialog class="mdl-dialog" style="width: 350px">
+    <h5 class="mdl-dialog__title">How GitMap Works?</h5>
     <div class="mdl-dialog__content">
         <p>
             This demo explores the possibility of building a "serverless" location based app by using only GitHub's
@@ -98,9 +98,9 @@
     dialog.querySelector('.close').addEventListener('click', function() {
         dialog.close();
     });
-    if (! localStorage.noFirstVisit) {
+    if (! localStorage.notFirstVisit) {
         dialog.showModal();
-        localStorage.noFirstVisit = "1";
+        localStorage.notFirstVisit = "1";
     }
 </script>
 
