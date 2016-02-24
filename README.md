@@ -18,7 +18,7 @@ This demo explores the possibility of building a location based app by using *on
 [GitHub OAuth](https://developer.github.com/v3/oauth/) requires that a secret client key will be used to convert the GitHub user login code to the authorization token. Since it is considered unsafe to expose this key, instead of storing it in the webapp I had set up a small [hook.io](https://hook.io/) hook to do the conversion using the secret key. Because this architecture is very irregular I am not sure that [the impact of exposing the client secret](http://tools.ietf.org/html/rfc6819#section-4.1.1) fully apply to it, so I will reconsider this in the future.
 
 #### Why is [map.geojson](https://github.com/idoco/GitMap/blob/gh-pages/map.geojson?short_path=5406685) filed with empty entries?
-This was a very simple solution to avoid merge conflicts issues. Every user adds his new entry in a random line in the file, which makes the chances of two users editing the same line simultaneously very slim. (The probability might still be higher than what you would expect as in the similar case of the [Birthday problem](https://en.wikipedia.org/wiki/Birthday_problem)) 
+This was a very simple trick to avoid merge conflicts issues. Every user adds his new entry in a random line in the file, which makes the chances of two users editing the same line simultaneously very slim. (The probability might still be higher than what you would expect as in the similar case of the [Birthday problem](https://en.wikipedia.org/wiki/Birthday_problem)) 
 
 #### My first project with react
 ![Me working with react](http://i1.kym-cdn.com/photos/images/original/000/234/765/b7e.jpg)
