@@ -19,7 +19,7 @@
                 ]
             },
             "properties": {
-                "title": "<h3> <a href=https://www.youtube.com/watch?v=jshk8ZVIgdI>SpaceX Falcon 9 - Landing Leg Inspector</a> </h3>",
+                "title": "<h3> <a href=https://www.youtube.com/watch?v=jshk8ZVIgdI>SpaceX Falcon 9 - Landing Gear Inspector</a> </h3>",
                 "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today SpaceX is actively developing the technologies to make this possible, with the ultimate goal of enabling human life on Mars.<br> <a href=https://www.youtube.com/watch?v=jshk8ZVIgdI>Link</a>",
                 "marker-symbol": "rocket",
                 "marker-size": "large"
@@ -102,8 +102,8 @@
                 ]
             },
             "properties": {
-                "title": "PM-in-Residence",
-                "description": "<h3> <a href=https://angel.co/gitmap/jobs>GitMap</a></h3>\n <a href=https://angel.co/gitmap/jobs/115720-pm-in-residence>PM-in-Residence</a>\n<br> $75k - $150k - No equity\n<p> Product-in-Residence at GitMap \nBe a part of one of the most exciting teams, in one of the most exciting tech spaces, in one of the world’s most exciting cities for startups.\n</p>",
+                "title": "<h3> <a href=https://angel.co/gitmap/jobs>GitMap - PM-in-Residence</a></h3> ",
+                "description": "<a href=https://angel.co/gitmap/jobs/115720-pm-in-residence>PM-in-Residence</a>\n<br> $75k - $150k - No equity <br> Product-in-Residence at GitMap \nBe a part of one of the most exciting teams, in one of the most exciting tech spaces, in one of the world’s most exciting cities for startups.",
                 "marker-symbol": "rocket",
                 "marker-size": "large"
             }
