@@ -183,6 +183,22 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "139.772",
+                    "35.671"
+                ]
+            },
+            "properties": {
+                "title": "Devices — Facebook Design Resources",
+                "description": "Facebook resource.\n\nand simil",
+                "marker-symbol": "rocket",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {},
