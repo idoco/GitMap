@@ -24,6 +24,7 @@ const customStyles = {
         zIndex: 101
     }
 };
+const linkMargin = {'margin-left': '4px', 'margin-right': '4px'};
 
 const geoJsonContent = "?url=https://raw.githubusercontent.com/idoco/GitMap/gh-pages/map.geojson";
 const renderMapUrl = "https://render.githubusercontent.com/view/geojson"+ geoJsonContent;
@@ -89,19 +90,31 @@ var App = React.createClass({
                     onRequestClose={this.closeAbout}
                     style={customStyles}  >
                     <div style={{width: '360px'}}>
-                        <h5 className="mdl-dialog__title">How GitMap Works?</h5>
+                        <h5 className="mdl-dialog__title">GitMap</h5>
                         <div className="mdl-dialog__content">
                             <p>
                                 This demo explores the possibility of building a "serverless" location based app by
-                                using only GitHub's cool ability to render GeoJSON files as interactive maps, and the
-                                powerful GitHub API.
+                                using only
+                                <a href="https://help.github.com/articles/mapping-geojson-files-on-github/"
+                                   style={linkMargin}>
+                                    GitHub's cool ability to render GeoJSON files
+                                </a> as interactive maps, and the
+                                powerful GitHub API (Nicely wrapped by
+                                <a href="https://github.com/michael/github"
+                                   style={linkMargin}>
+                                    Github.js
+                                </a>).
                             </p>
                             <p>
-                                The map view is rendered by GitHub from a GeoJSON file stored on GitHub pages and new
-                                entries are added to it by forking and creating a pull request on behalf of the
-                                submitting user. This GitHub "serverless" architecture is powered by using GitHub itself
-                                as the app's database and writing to it by using GitHub's API directly from the user's
-                                browser.
+                                The map view is rendered by GitHub from a
+                                <a href="https://github.com/idoco/GitMap/blob/gh-pages/map.geojson"
+                                   style={linkMargin}>
+                                    GeoJSON file
+                                </a>
+                                stored on GitHub pages and new entries are added to it by forking and creating a pull
+                                request on behalf of the submitting user. This GitHub "serverless" architecture is
+                                powered by using GitHub itself as the app's database and writing to it by using GitHub's
+                                API directly from the user's browser.
                             </p>
                         </div>
                         <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
