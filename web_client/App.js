@@ -31,7 +31,11 @@ const renderMapUrl = "https://render.githubusercontent.com/view/geojson"+ geoJso
 var App = React.createClass({
 
     getInitialState: function() {
-        return { modalIsOpen: controller.isUrlWithCode() };
+        console.log(controller.isUrlWithCode());
+        return {
+            modalIsOpen: controller.isUrlWithCode(),
+            isAboutOpen: !controller.isUrlWithCode()
+        };
     },
 
     openModal: function() {
@@ -40,6 +44,10 @@ var App = React.createClass({
 
     closeModal: function() {
         this.setState({modalIsOpen: false});
+    },
+
+    closeAbout: function() {
+        this.setState({isAboutOpen: false});
     },
 
     render: function() {
@@ -75,6 +83,34 @@ var App = React.createClass({
                                   isUrlWithCode={controller.isUrlWithCode}
                     />
                 </Modal>
+
+                <Modal
+                    isOpen={this.state.isAboutOpen}
+                    onRequestClose={this.closeAbout}
+                    style={customStyles}  >
+                    <div style={{width: '360px'}}>
+                        <h5 className="mdl-dialog__title">How GitMap Works?</h5>
+                        <div className="mdl-dialog__content">
+                            <p>
+                                This demo explores the possibility of building a "serverless" location based app by
+                                using only GitHub's cool ability to render GeoJSON files as interactive maps, and the
+                                powerful GitHub API.
+                            </p>
+                            <p>
+                                The map view is rendered by GitHub from a GeoJSON file stored on GitHub pages and new
+                                entries are added to it by forking and creating a pull request on behalf of the
+                                submitting user. This GitHub "serverless" architecture is powered by using GitHub itself
+                                as the app's database and writing to it by using GitHub's API directly from the user's
+                                browser.
+                            </p>
+                        </div>
+                        <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                                onClick={this.closeAbout}>
+                            Close
+                        </button>
+                    </div>
+                </Modal>
+
 
             </div>
         );
