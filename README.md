@@ -1,7 +1,9 @@
 # [GitMap Demo](https://idoco.github.io/GitMap/)
 **A location based job board powered only by GitHub.**
 
-This demo explores the possibility of building a location based app by using *only* [GitHub's cool ability to render GeoJSON files](https://help.github.com/articles/mapping-geojson-files-on-github/) as - interactive, browsable, annotated maps ([example](map.geojson)), and the powerful GitHub API (Nicely wrapped by [Github.js](https://github.com/michael/github)). You can think of it as a "serverless" GitHub architecture.
+This demo explores the possibility of building a "serverless" location based app by using only [GitHub's cool ability to render GeoJSON files](https://help.github.com/articles/mapping-geojson-files-on-github/) as interactive maps, and the powerful GitHub API (Nicely wrapped by [Github.js](https://github.com/michael/github)).
+
+The map view is rendered by GitHub from a [GeoJSON file](map.geojson) stored on GitHub pages and new entries are added to it by forking and creating a pull request on behalf of the submitting user. This GitHub "serverless" architecture is powered by using GitHub itself as the app's database and writing to it by using GitHub's API directly from the user's browser.
 
 ![gitmap](https://cloud.githubusercontent.com/assets/5776439/12868306/39998b0e-cd0c-11e5-9e0f-77670fed4eeb.png)
 
