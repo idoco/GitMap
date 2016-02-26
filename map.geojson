@@ -172,6 +172,22 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "8.629",
+                    "50.083"
+                ]
+            },
+            "properties": {
+                "title": "Full Stack Web Developer",
+                "description": "PHP, SQL, JavaScript, HTML, CSS, Amazon AWS",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large"
+            }
+        },
         {},
         {},
         {},
