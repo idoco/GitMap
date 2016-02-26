@@ -111,6 +111,7 @@ function Controller() {
         // pushing the new entry in a random index in the list should make automatic merging simpler
         var features = geojson.features;
         var randomIndexInFeaturesArray = Math.floor(Math.random() * (features.length-1));
+        entry.properties.contact = "<a href=https://github.com/"+username+"/>"+username+"</a>";
         features.splice(randomIndexInFeaturesArray, 0, entry);
 
         var options = {
