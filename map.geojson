@@ -155,7 +155,7 @@
                  ]
              },
              "properties": {
-                 "title": "<h3> <a href='http://bridg.com/careers/'>Full-Stack Engineer - Full Time</a> </h3>",
+                 "title": "<h3> <a href='http://bridg.com/careers/'>Bridg - Full-Stack Engineer</a> </h3>",
                  "description": "We are looking for a sharp engineer who wants to tackle problems accross our entire stack: Big Data / processing. > API > Angular.js Frontend. You must be extremely comfortable with programming Javascript. Technology we’re using inlcudes Node.js, Golang Angular.js,Docker,Apache storm, Apache Spark and AWS.",
                  "marker-symbol": "rocket",
                  "marker-size": "large"
