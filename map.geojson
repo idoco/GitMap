@@ -124,7 +124,9 @@
         {},
         {},
         {},
-        {},
+        {
+          
+        },
         {},
         {},
         {},
@@ -145,19 +147,19 @@
         {},
         {
             "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -0.126,
-                    51.509
-                ]
-            },
-            "properties": {
-                "title": "<h3> <a href=https://angel.co/gitmap/jobs/123-senior-full-stack-python-developer>Senior Full-Stack Python Developer At MapChat</a> </h3>",
-                "description": "<br>£50k - £75k - 0.0-0.5% <br> We’re looking for a highly skilled Python / Django developer who can help make our entrepreneurs idea become a reality. You will build MVPs, offer expert technical advice and make suggestions for innovations through working in an agile fashion as a founding member of the companies we invest in.",
-                "marker-symbol": "rocket",
-                "marker-size": "large"
-            }
+             "geometry": {
+                 "type": "Point",
+                 "coordinates": [
+                     "-118.442605",
+                     "34.036977"
+                 ]
+             },
+             "properties": {
+                 "title": "<h3> <a href='http://bridg.com/careers/'>Bridg - Full-Stack Engineer</a> </h3>",
+                 "description": "We are looking for a sharp engineer who wants to tackle problems accross our entire stack: Big Data / processing. > API > Angular.js Frontend. You must be extremely comfortable with programming Javascript. Technology we’re using inlcudes Node.js, Golang Angular.js,Docker,Apache storm, Apache Spark and AWS.",
+                 "marker-symbol": "rocket",
+                 "marker-size": "large"
+             }
         },
         {},
         {},
