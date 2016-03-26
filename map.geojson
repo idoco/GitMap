@@ -178,6 +178,23 @@
         },
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "7.580",
+                    "50.348"
+                ]
+            },
+            "properties": {
+                "title": "Web Developer",
+                "description": "PHP, SQL, JavaScript, jQuery, HTML, CSS",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/DarthDestroyer/>DarthDestroyer</a>"
+            }
+        },
         {},
         {},
         {},
