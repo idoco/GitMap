@@ -228,6 +228,23 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
+                    "14.421",
+                    "50.088"
+                ]
+            },
+            "properties": {
+                "title": "Martin Allien",
+                "description": "Freelance Web/Graphic Designer | @AllienWorks",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/allienworks/>allienworks</a>"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
                     "8.629",
                     "50.083"
                 ]
