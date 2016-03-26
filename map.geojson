@@ -25,6 +25,23 @@
             }
         },
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "-2.099443",
+                    "53.484140"
+                ]
+            },
+            "properties": {
+                "title": "PHP Contractor",
+                "description": "PHP Contractor",
+                "marker-symbol": "lighthouse",
+                "marker-size": "large",
+                "contact": "<a href=\"https://github.com/matthewbaggett/\">Matthew Baggett</a>"
+            }
+        },
         {},
         {
             "type": "Feature",
