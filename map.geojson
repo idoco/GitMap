@@ -109,6 +109,23 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "17.099",
+                    "48.151"
+                ]
+            },
+            "properties": {
+                "title": "Full stack developer",
+                "description": "C++, Node.js, Angular.js, React",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/petersandor/>petersandor</a>"
+            }
+        },
         {},
         {},
         {},
