@@ -231,6 +231,23 @@
         },
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "80.226",
+                    "12.845"
+                ]
+            },
+            "properties": {
+                "title": "qbattles",
+                "description": "Context aware social engagement app.",
+                "marker-symbol": "rocket",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/itsgg/>itsgg</a>"
+            }
+        },
         {},
         {},
         {},
