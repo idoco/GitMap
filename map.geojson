@@ -253,6 +253,23 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "23.195",
+                    "-33.938"
+                ]
+            },
+            "properties": {
+                "title": "Super Developer",
+                "description": "Create super parts using super tools for a super product.",
+                "marker-symbol": "rocket",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/dylanbr/>dylanbr</a>"
+            }
+        },
         {},
         {},
         {},
