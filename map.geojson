@@ -101,6 +101,23 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "11.377",
+                    "45.560"
+                ]
+            },
+            "properties": {
+                "title": "Full-stack web developer",
+                "description": "- NodeJS\n- Scala, Play Framework\n- PHP, Yii, Zend\n- MongoDB\n- Cassandra\n- SQL",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/emanueleperuffo/>emanueleperuffo</a>"
+            }
+        },
         {},
         {},
         {},
