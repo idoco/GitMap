@@ -104,6 +104,23 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "11.377",
+                    "45.560"
+                ]
+            },
+            "properties": {
+                "title": "Emanuele Peruffo",
+                "description": "Full-stack web developer:\n- NodeJS, Scala, PHP\n- SQL, Cassandra, MongoDB",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/emanueleperuffo/>emanueleperuffo</a>"
+            }
+        },
         {},
         {},
         {},
