@@ -65,6 +65,23 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "101.112",
+                    "13.311"
+                ]
+            },
+            "properties": {
+                "title": "Senior Software Developer",
+                "description": "How GitMap Works?\n\nThe static site is served by GitHub pages.\nThe main page loads a render.githubusercontent iframe which renders the map.geojson as a full screen map.\nWhen publishing a new entry, your browser will execute the calls to GitHub API by using Github.js\nA request will be sent by you to fork this repository.\nThe map.geojson file in the forked repository will be edited to contain the new published data.\nA pull request will be created on your behalf, to merge the new data to the main repository.\nYour pull request will be manually approved and merged, and the new data will show up on the map after a few moments.",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/korrio/>korrio</a>"
+            }
+        },
         {},
         {},
         {},
@@ -225,23 +242,6 @@
                 "description": "We are looking for a sharp engineer who wants to tackle problems accross our entire stack: Big Data / processing. > API > Angular.js Frontend. You must be extremely comfortable with programming Javascript. Technology we’re using inlcudes Node.js, Golang Angular.js,Docker,Apache storm, Apache Spark and AWS.",
                 "marker-symbol": "rocket",
                 "marker-size": "large"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "101.112",
-                    "13.311"
-                ]
-            },
-            "properties": {
-                "title": "Senior Software Developer",
-                "description": "How GitMap Works?\n\nThe static site is served by GitHub pages.\nThe main page loads a render.githubusercontent iframe which renders the map.geojson as a full screen map.\nWhen publishing a new entry, your browser will execute the calls to GitHub API by using Github.js\nA request will be sent by you to fork this repository.\nThe map.geojson file in the forked repository will be edited to contain the new published data.\nA pull request will be created on your behalf, to merge the new data to the main repository.\nYour pull request will be manually approved and merged, and the new data will show up on the map after a few moments.",
-                "marker-symbol": "rocket",
-                "marker-size": "large",
-                "contact": "<a href=https://github.com/korrio/>korrio</a>"
             }
         },
         {},
