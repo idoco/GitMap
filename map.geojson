@@ -227,6 +227,23 @@
                 "marker-size": "large"
             }
         },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "101.112",
+                    "13.311"
+                ]
+            },
+            "properties": {
+                "title": "Senior Software Developer",
+                "description": "How GitMap Works?\n\nThe static site is served by GitHub pages.\nThe main page loads a render.githubusercontent iframe which renders the map.geojson as a full screen map.\nWhen publishing a new entry, your browser will execute the calls to GitHub API by using Github.js\nA request will be sent by you to fork this repository.\nThe map.geojson file in the forked repository will be edited to contain the new published data.\nA pull request will be created on your behalf, to merge the new data to the main repository.\nYour pull request will be manually approved and merged, and the new data will show up on the map after a few moments.",
+                "marker-symbol": "rocket",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/korrio/>korrio</a>"
+            }
+        },
         {},
         {},
         {
@@ -349,23 +366,6 @@
                 "description": "Facebook resource.\n\nand simil",
                 "marker-symbol": "rocket",
                 "marker-size": "large"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    "121.514",
-                    "15.780"
-                ]
-            },
-            "properties": {
-                "title": "klkklklklkklkklklklk",
-                "description": "klklklklklklklk lllllllll\nlll;l;l;l;l\nl;l;l\nl;l;l\nl;l;l;l;l;l;l;",
-                "marker-symbol": "rocket",
-                "marker-size": "large",
-                "contact": "<a href=https://github.com/korrio/>korrio</a>"
             }
         },
         {},
