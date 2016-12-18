@@ -218,6 +218,23 @@
         {},
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "34.804",
+                    "32.061"
+                ]
+            },
+            "properties": {
+                "title": "Node developer",
+                "description": "Bla bla Bla bla Bla bla Bla bla Bla bla Bla bla Bla bla Bla bla Bla bla Bla bla Bla bla ",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/idoco/>idoco</a>"
+            }
+        },
         {},
         {},
         {},
