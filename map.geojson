@@ -123,6 +123,23 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
+                    "-19.138",
+                    "64.108"
+                ]
+            },
+            "properties": {
+                "title": "Master Builder",
+                "description": "Build stuff                                               ",
+                "marker-symbol": "rocket",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/Gurzalot/>Gurzalot</a>"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
                     "11.377",
                     "45.560"
                 ]
