@@ -318,6 +318,23 @@
         },
         {},
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "170.030",
+                    "-33.920"
+                ]
+            },
+            "properties": {
+                "title": "testtesttest",
+                "description": "testtesttestsetsetsetset",
+                "marker-symbol": "clothing-store",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/alisrbdni/>alisrbdni</a>"
+            }
+        },
         {},
         {},
         {},
