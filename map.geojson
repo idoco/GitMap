@@ -336,6 +336,23 @@
             }
         },
         {},
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "25.1080001",
+                    "60.2642905"
+                ]
+            },
+            "properties": {
+                "title": "Enterpreneur",
+                "description": "Web development and ecommerce startup.",
+                "marker-symbol": "rocket",
+                "marker-size": "large",
+                "contact": "<a href=https://github.com/TomiToivio/>TomiToivio</a>"
+            }
+        },
         {},
         {},
         {
